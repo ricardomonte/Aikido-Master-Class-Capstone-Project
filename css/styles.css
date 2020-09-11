@@ -6,12 +6,82 @@
   src: url("../fonts/Cocogoose Pro Regular Trial.woff") format("woff");
   font-family: "Cocogoose-regular";
 }
-body {
-  background-color: #ec5242;
+header {
+  background-color: #fff;
   width: 100%;
-  height: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+header .top-header {
+  height: 5vh;
+  background-color: #272a31;
+}
+header .nav-container, header .bottom-header {
+  margin: 0 12vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .nav-ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+header .nav-li {
+  padding: 0 1vw;
+}
+header .nav-li .li-link {
+  color: #d3d3d3;
+}
+header .bottom-header {
+  height: 15vh;
+  justify-content: space-between;
+  width: 75%;
+}
+header .img-logo, header .img-logo img {
+  width: 200px;
+  height: 116px;
+}
+header .nav-container-botton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+header .nav-container-botton .nav-ul-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+header .nav-container-botton .li-link {
+  font-weight: 700;
+  color: #808080;
+}
+header .nav-container-botton .selected {
+  color: #ec5242;
+}
+
+* {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 body h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "Cocogoose-border";
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
 }

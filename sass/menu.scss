@@ -1,0 +1,63 @@
+header {
+  background-color: $bgd-white;
+  width: 100%;
+
+  .top-header {
+    height: 5vh;
+    background-color: $primary-color;
+  }
+
+  .nav-container{
+    margin: 0 12vw;
+    @include rowMenu;
+  }
+
+  .nav-ul {
+    @include rowMenu;
+    padding-top: 0.5rem;
+  }
+
+  .nav-li {
+    padding: 0 1vw;
+
+    .li-link {
+      color: $third-color;
+    } 
+  }
+
+  .bottom-header {
+    height: 15vh;
+    @extend .nav-container;
+    justify-content: space-between;
+    width: 75%;
+  }
+
+  .img-logo {
+    width: 200px;
+    height: 116px;
+    & img{
+      @extend .img-logo;
+    }
+  }
+
+  .nav-container-botton {
+    @include rowMenu;
+    width: 100%;
+  
+    .nav-ul-bottom {
+      @include rowMenu;
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    .li-link {
+      font-weight: 700;
+      color: $fourth-color;
+    }
+
+    .selected {
+      color: $secundary-color;
+    }
+
+  }
+}
