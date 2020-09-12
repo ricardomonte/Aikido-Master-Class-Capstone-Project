@@ -1,3 +1,8 @@
+@mixin containerPage {
+  margin: 0 12vw;
+}
+
+
 @mixin columnFLex-main {
   display: $d-flex;
   flex-direction: column;
@@ -9,4 +14,22 @@
   display: $d-flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+@mixin background {
+  background: url(/img/aikido1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; 
+  &:after {
+    content: "";
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    height: $h-firstSecction;
+    width: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.8169467616148022) 0%, rgba(249,249,249,1) 60%);
+  }
 }

@@ -8,7 +8,7 @@ header {
   }
 
   .nav-container{
-    margin: 0 12vw;
+    @include containerPage;
     @include rowMenu;
   }
 
@@ -26,7 +26,7 @@ header {
   }
 
   .bottom-header {
-    height: 15vh;
+    height: $h-bottomHeader;
     @extend .nav-container;
     justify-content: space-between;
     width: 75%;

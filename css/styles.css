@@ -62,6 +62,30 @@ header .nav-container-botton .selected {
   color: #ec5242;
 }
 
+main .container-first {
+  background: url(/img/aikido1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+main .container-first:after {
+  content: "";
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  height: 80vh;
+  width: 100%;
+  background: white;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8169467616) 0%, #f9f9f9 60%);
+}
+main .first {
+  position: relative;
+  margin: 0 12vw;
+  height: 80vh;
+  z-index: 1;
+}
+
 * {
   margin-top: 0;
   box-sizing: border-box;

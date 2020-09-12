@@ -1,0 +1,14 @@
+main {
+
+  .container-first {
+    @include background;
+  }
+
+  .first {
+    position: relative;
+    @include containerPage;
+    height: $h-firstSecction;
+    z-index: 1;
+  }
+  
+}

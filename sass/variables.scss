@@ -17,3 +17,13 @@ $font-coco-border: 'Cocogoose-border';
 $font-coco-regular: 'Cocogoose-regular';
 
 $d-flex: flex;
+
+//height header
+
+$h-topHeader: 5vh;
+$h-bottomHeader: 15vh;
+
+// first secction height
+
+$h-firstSecction: 100vh - ($h-topHeader + $h-bottomHeader);
+
