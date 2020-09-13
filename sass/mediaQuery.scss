@@ -78,6 +78,44 @@
       }
     }
 
+    .master {
+      grid-area: section3;
+      margin: 0 1.4rem;
+      height: 47vh;
+      overflow: hidden;
+      
+      .container-master {
+        @include gridMd;
+        grid-template-rows: set-grid($rows1);
+        grid-template-areas: $templateMd1;
+        row-gap: 20px;
+        width: 100vw;
+      }
+
+      .master-info {
+        width: 100%;
+      }
+
+      .master1 {
+        grid-area: program1;
+      }
+      .master2 {
+        grid-area: program2;
+      }
+      .master3 {
+        grid-area: program3;
+      }
+      .master4 {
+        grid-area: program4;
+      }
+      .master5 {
+        grid-area: program5;
+      }
+      .master6 {
+        grid-area: program6;
+      }
+    }
+
   }
   
 }

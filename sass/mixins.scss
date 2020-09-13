@@ -145,10 +145,6 @@
 }
 
 @function set-grid($temp){
-  @if ($temp == 4) {
-    @return repeat(1fr, 4);
-  } @else {
-    @return repeat(1fr, 6);
-  }
-  
+  @return repeat(1fr, $temp);
 }
+  

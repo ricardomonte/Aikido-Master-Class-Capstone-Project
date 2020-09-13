@@ -418,7 +418,7 @@ p, h3, h4 {
   main .container-main-program .container-program-section {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: repeat(1fr, 6);
+    grid-template-rows: repeat(1fr, 5);
     grid-template-areas: "program1" "program2" "program3" "program4" "program5" "program6";
     height: 70%;
     row-gap: 10px;
@@ -456,6 +456,41 @@ p, h3, h4 {
     justify-content: center;
     height: 4.3rem;
   }
+  main .master {
+    grid-area: section3;
+    margin: 0 1.4rem;
+    height: 47vh;
+    overflow: hidden;
+  }
+  main .master .container-master {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(1fr, 5);
+    grid-template-areas: "program1" "program2" "program3" "program4" "program5" "program6";
+    row-gap: 20px;
+    width: 100vw;
+  }
+  main .master .master-info {
+    width: 100%;
+  }
+  main .master .master1 {
+    grid-area: program1;
+  }
+  main .master .master2 {
+    grid-area: program2;
+  }
+  main .master .master3 {
+    grid-area: program3;
+  }
+  main .master .master4 {
+    grid-area: program4;
+  }
+  main .master .master5 {
+    grid-area: program5;
+  }
+  main .master .master6 {
+    grid-area: program6;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -463,7 +498,15 @@ p, h3, h4 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
+  main .master .container-master > .section1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
   main .container-main-program .container-program-section .section2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .section2 {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
@@ -471,12 +514,72 @@ p, h3, h4 {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
+  main .master .container-master > .section3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
   main .container-main-program .container-program-section .section4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .section4 {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
   }
   main .container-main-program .container-program-section .section5 {
     -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .section5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  main .master .master1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .master1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .master .master2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .master2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  main .master .master3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .master3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  main .master .master4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .master4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  main .master .master5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .master5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  main .master .master6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  main .master .container-master > .master6 {
+    -ms-grid-row: 11;
     -ms-grid-column: 1;
   }
 }
@@ -488,6 +591,10 @@ p, h3, h4 {
   }
   main .container-main-program {
     -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .master {
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
 }
