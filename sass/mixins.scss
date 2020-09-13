@@ -57,7 +57,6 @@
 @mixin h2 {
   font-size: 1.8em;
   font-weight: 700;
-  // margin: 1em 0;
   &:after {
     content: '___';
     display: flex;
@@ -109,4 +108,15 @@
   display: grid;
   grid-template-columns: repeat(1fr, 5);
   grid-template-areas: $template1;
+}
+
+@mixin h3 {
+  font-size: 1.5em;
+  font-weight: 700; 
+}
+
+@mixin h5 {
+  font-size: 1em;
+  font-weight: 700;
+  color: $secundary-color;
 }

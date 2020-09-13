@@ -27,6 +27,8 @@ main {
 
     .container-title {
       width: 80%;
+      display: flex;
+      justify-content: flex-start;
       
 
       h1 {
@@ -64,6 +66,7 @@ main {
 
       &:nth-child(1) {
         @include columnFLex-main;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
       }
@@ -106,6 +109,69 @@ main {
       }
     }
   
+    .program-link {
+      @include programText;
+      text-transform: uppercase;
+    }
+  }
+
+  .master {
+    @include containerPage;
+    @include columnFLex-main;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+
+    h2 {
+      @include h2;
+    }
+
+    .container-master {
+      height: 75%;
+      width: 100%;
+      @include rowCenter;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .img-size {
+      width: 150px;
+      height: auto;
+    }
+
+    .master-info {
+      @include rowCenter;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 45%;
+    }
+
+    .master-text {
+      margin-left: 20px;
+    }
+
+    h3 {
+      @include h3;
+    }
+
+    h5 {
+      @include h5;
+      &:after {
+        content: '___';
+        display: flex;
+        justify-content: flex-start;
+        color: rgba($fourth-color, 0.2);
+      }
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 0.8em;
+    }
+  }
+
+  .partners {
+
   }
 } 
 

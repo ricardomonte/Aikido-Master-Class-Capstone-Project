@@ -101,6 +101,8 @@ main .container-first .container-quote {
 }
 main .container-first .container-title {
   width: 80%;
+  display: flex;
+  justify-content: flex-start;
 }
 main .container-first .container-title h1 {
   background: linear-gradient(180deg, rgba(255, 67, 47, 0.99) 0%, rgba(255, 67, 47, 0.8) 77%), url(../img/aikido2.png);
@@ -159,6 +161,7 @@ main .container-main-program .main-program:nth-child(1) {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
@@ -209,7 +212,75 @@ main .container-main-program .container-program-section .section4 {
 main .container-main-program .container-program-section .section5 {
   grid-template: job5;
 }
-
+main .container-main-program .program-link {
+  color: #f5f5f5;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+main .master {
+  margin: 0 12vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+}
+main .master h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+main .master h2:after {
+  content: "___";
+  display: flex;
+  justify-content: center;
+  color: #ec5242;
+}
+main .master .container-master {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .master .img-size {
+  width: 150px;
+  height: auto;
+}
+main .master .master-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 45%;
+}
+main .master .master-text {
+  margin-left: 20px;
+}
+main .master h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+main .master h5 {
+  font-size: 1em;
+  font-weight: 700;
+  color: #ec5242;
+}
+main .master h5:after {
+  content: "___";
+  display: flex;
+  justify-content: flex-start;
+  color: rgba(105, 105, 105, 0.2);
+}
+main .master p {
+  font-weight: 700;
+  font-size: 0.8em;
+}
 * {
   margin-top: 0;
   box-sizing: border-box;
