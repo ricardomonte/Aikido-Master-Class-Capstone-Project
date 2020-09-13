@@ -7,7 +7,7 @@
   display: $d-flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @mixin rowMenu {
@@ -30,6 +30,18 @@
     height: $h-firstSecction;
     width: 100%;
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,0.8169467616148022) 0%, rgba(249,249,249,1) 60%);
+    background: linear-gradient(180deg, rgba(245,245,245,0.8169467616148022) 0%, rgb(245,245,245) 60%);
   }
 }
+
+@mixin clip{
+  // position: relative;
+  background: linear-gradient(180deg, rgba(saturate($secundary-color,100%),0.99) 0%, rgba(saturate($secundary-color,100%),0.8) 77%), url(../img/aikido2.png);
+  background-repeat: no-repeat;
+  background-position:0px 5px;
+  background-size: contain;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 6.4em;
+}
+

@@ -32,8 +32,12 @@ header {
     width: 75%;
   }
 
+  .container-menu {
+    width: 100%;
+  }
+
   .img-logo {
-    width: 200px;
+    width: 150px;
     height: 116px;
     & img{
       @extend .img-logo;

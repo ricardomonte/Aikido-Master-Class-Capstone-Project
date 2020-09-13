@@ -9,6 +9,21 @@ main {
     @include containerPage;
     height: $h-firstSecction;
     z-index: 1;
+    @include columnFLex-main;
   }
-  
-}
+
+  .container-quote {
+    font-size: 3em;
+    color: saturate($secundary-color, 100%);
+  }
+
+  .container-title {
+    width: 80%;
+    
+
+    h1 {
+      @include clip;
+    }
+  }
+}  
+
