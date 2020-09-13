@@ -3,7 +3,7 @@
   font-family: "Cocogoose-border";
 }
 @font-face {
-  src: url("../fonts/Cocogoose Pro Regular Trial.woff") format("woff");
+  src: url("../fonts/Cocogoose-Pro-Regular.woff") format("woff");
   font-family: "Cocogoose-regular";
 }
 header {
@@ -70,36 +70,39 @@ main .container-first {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -1;
 }
 main .container-first:after {
   content: "";
   position: absolute;
   top: 20vh;
   right: 0;
-  height: 80vh;
+  height: 92vh;
   width: 100%;
   background: white;
   background: linear-gradient(180deg, rgba(245, 245, 245, 0.8169467616) 0%, whitesmoke 60%);
 }
-main .first {
+main .container-first .first {
   position: relative;
   margin: 0 12vw;
-  height: 80vh;
+  height: 92vh;
   z-index: 1;
+}
+main .container-first .first .container-first-info {
+  position: absolute;
+  height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-main .container-quote {
+main .container-first .container-quote {
   font-size: 3em;
   color: #ff432f;
 }
-main .container-title {
+main .container-first .container-title {
   width: 80%;
 }
-main .container-title h1 {
+main .container-first .container-title h1 {
   background: linear-gradient(180deg, rgba(255, 67, 47, 0.99) 0%, rgba(255, 67, 47, 0.8) 77%), url(../img/aikido2.png);
   background-repeat: no-repeat;
   background-position: 0px 5px;
@@ -107,6 +110,104 @@ main .container-title h1 {
   -webkit-background-clip: text;
   color: transparent;
   font-size: 6.4em;
+}
+main .container-first .container-info, main .container-first .container-date {
+  border: 4px solid white;
+  font-weight: 700;
+  padding: 0.6em;
+  text-align: left;
+  width: 50%;
+  color: #696969;
+}
+main .container-first .container-date {
+  border: 0;
+  margin-top: 3em;
+}
+main .container-first .container-date h2 {
+  font-family: "Cocogoose-regular";
+}
+main .container-main-program {
+  position: relative;
+  height: 68vh;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALUlEQVQYlWNQUtH8z0AAwNXgU4whh00xTgPUtQz/I2OcbhkghUR5hqjgITbAAeEyKTnSw6pPAAAAAElFTkSuQmCC) repeat;
+  background-size: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container-main-program:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #272a31;
+  z-index: -1;
+}
+main .container-main-program .main-program {
+  height: 68vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 12vw;
+}
+main .container-main-program .main-program:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .container-main-program h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: whitesmoke;
+}
+main .container-main-program h2:after {
+  content: "___";
+  display: flex;
+  justify-content: center;
+  color: #ec5242;
+}
+main .container-main-program .container-program-section {
+  display: grid;
+  grid-template-columns: repeat(1fr, 5);
+  grid-template-areas: "job1 job2 job3 job4 job5";
+  column-gap: 10px;
+}
+main .container-main-program .container-program-section .general-section {
+  background-color: rgba(105, 105, 105, 0.2);
+  padding: 2rem;
+}
+main .container-main-program .container-program-section .general-section h3 {
+  color: #ec5242;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8rem;
+}
+main .container-main-program .container-program-section .general-section h4 {
+  color: #f5f5f5;
+  font-size: 1em;
+  font-weight: 700;
+}
+main .container-main-program .container-program-section .section1 {
+  grid-template: job1;
+}
+main .container-main-program .container-program-section .section2 {
+  grid-template: job2;
+}
+main .container-main-program .container-program-section .section3 {
+  grid-template: job3;
+}
+main .container-main-program .container-program-section .section4 {
+  grid-template: job4;
+}
+main .container-main-program .container-program-section .section5 {
+  grid-template: job5;
 }
 
 * {
@@ -131,4 +232,8 @@ ul {
 
 li {
   list-style: none;
+}
+
+p, h3, h4 {
+  margin-bottom: 0;
 }

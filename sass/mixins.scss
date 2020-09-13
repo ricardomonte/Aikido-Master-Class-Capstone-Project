@@ -2,7 +2,6 @@
   margin: 0 12vw;
 }
 
-
 @mixin columnFLex-main {
   display: $d-flex;
   flex-direction: column;
@@ -16,12 +15,17 @@
   align-items: center;
 }
 
+@mixin rowCenter {
+  display: $d-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin background {
   background: url(/img/aikido1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -1; 
   &:after {
     content: "";
     position: absolute;
@@ -35,7 +39,6 @@
 }
 
 @mixin clip{
-  // position: relative;
   background: linear-gradient(180deg, rgba(saturate($secundary-color,100%),0.99) 0%, rgba(saturate($secundary-color,100%),0.8) 77%), url(../img/aikido2.png);
   background-repeat: no-repeat;
   background-position:0px 5px;
@@ -45,3 +48,65 @@
   font-size: 6.4em;
 }
 
+@mixin textBase {
+  text-align: left;
+  width: 50%;
+  color: $fourth-color;
+}
+
+@mixin h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  // margin: 1em 0;
+  &:after {
+    content: '___';
+    display: flex;
+    justify-content: center;
+    color: $secundary-color;
+  }
+}
+
+@mixin backgroundMprogram {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALUlEQVQYlWNQUtH8z0AAwNXgU4whh00xTgPUtQz/I2OcbhkghUR5hqjgITbAAeEyKTnSw6pPAAAAAElFTkSuQmCC) repeat;
+  background-size: 3%;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    z-index: -1;
+
+  }
+}
+
+@mixin programTitle {
+  color: $secundary-color;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin:0.8rem;
+}
+
+@mixin programText {
+  color: $fifth-color;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+@mixin posAb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include containerPage();
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(1fr, 5);
+  grid-template-areas: $template1;
+}

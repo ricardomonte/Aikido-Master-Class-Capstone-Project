@@ -4,7 +4,7 @@ $primary-color: #272a31;
 $secundary-color: #ec5242;
 $third-color: #d3d3d3;
 $fourth-color: #696969;
-
+$fifth-color: #f5f5f5;
 $bgd-white: #fff;
 
 // breakpoint
@@ -25,7 +25,9 @@ $h-bottomHeader: 15vh;
 
 // first secction height
 
-$h-firstSecction: 100vh - ($h-topHeader + $h-bottomHeader);
+$h-firstSecction: 92vh;
+
+$template1:'job1 job2 job3 job4 job5';
 
 
 
