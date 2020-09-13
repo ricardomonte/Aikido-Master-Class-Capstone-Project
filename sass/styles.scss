@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'menu';
 @import 'main';
+@import 'footer';
 
 * {
   margin-top: 0;
@@ -28,6 +29,7 @@ a {
 
 ul {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 li {

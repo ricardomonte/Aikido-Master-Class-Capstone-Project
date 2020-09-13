@@ -249,7 +249,7 @@ main .master .container-master {
 }
 main .master .img-size {
   width: 150px;
-  height: auto;
+  height: 150px;
 }
 main .master .master-info {
   display: flex;
@@ -281,6 +281,61 @@ main .master p {
   font-weight: 700;
   font-size: 0.8em;
 }
+main .partners {
+  background-color: #696969;
+  text-align: center;
+  padding: 4em 0;
+}
+main .partners h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #d3d3d3;
+}
+main .partners h2:after {
+  content: "___";
+  display: flex;
+  justify-content: center;
+  color: #ec5242;
+}
+main .partners .container-partners {
+  margin: 0 12vw;
+  display: grid;
+  grid-template-columns: repeat(1fr, 5);
+  grid-template-areas: "job1 job2 job3 job4 job5";
+}
+main .partners .container-partners .brand {
+  position: relative;
+}
+main .partners .container-partners .brand:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(105, 105, 105, 0.8);
+}
+main .partners .container-partners .brand img {
+  width: 150px;
+  height: 150px;
+}
+
+footer {
+  background-color: rgba(211, 211, 211, 0.2);
+}
+footer .container-footer {
+  margin: 0 12vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 5em;
+  padding: 3em 0;
+}
+footer img {
+  width: 150px;
+  height: 150px;
+}
+
 * {
   margin-top: 0;
   box-sizing: border-box;
@@ -299,6 +354,7 @@ a {
 
 ul {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 li {

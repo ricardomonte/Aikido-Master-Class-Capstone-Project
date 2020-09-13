@@ -15,6 +15,12 @@
   align-items: center;
 }
 
+@mixin rowStart {
+  display: $d-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @mixin rowCenter {
   display: $d-flex;
   justify-content: center;
@@ -119,4 +125,9 @@
   font-size: 1em;
   font-weight: 700;
   color: $secundary-color;
+}
+
+@mixin imgSize {
+  width: 150px;
+  height: 150px;
 }

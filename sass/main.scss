@@ -1,5 +1,4 @@
 main {
-
   .container-first {
     @include background;
   
@@ -135,8 +134,7 @@ main {
     }
 
     .img-size {
-      width: 150px;
-      height: auto;
+      @include imgSize;
     }
 
     .master-info {
@@ -171,7 +169,36 @@ main {
   }
 
   .partners {
+    background-color: $fourth-color;
+    text-align: center;
+    padding: 4em 0;
 
+    h2 {
+      @include h2;
+      color: $third-color;
+    }
+
+    .container-partners {
+      @include containerPage;
+      @include grid;
+    
+      .brand {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($fourth-color, 0.8);
+        }
+
+        img {
+          @include imgSize; 
+        }
+      }
+    }
   }
 } 
 

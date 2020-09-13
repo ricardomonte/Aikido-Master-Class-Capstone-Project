@@ -1,0 +1,14 @@
+footer {
+  background-color: rgba($third-color, 0.2);
+
+  .container-footer {
+    @include containerPage;
+    @include rowStart;
+    column-gap: 5em;
+    padding: 3em 0;
+  }
+
+  img {
+    @include imgSize;
+  }
+}
