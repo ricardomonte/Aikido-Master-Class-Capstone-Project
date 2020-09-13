@@ -49,6 +49,7 @@ header .nav-container-botton {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  column-gap: 5rem;
 }
 header .nav-container-botton .nav-ul-bottom {
   display: flex;
@@ -63,6 +64,10 @@ header .nav-container-botton .li-link {
 }
 header .nav-container-botton .selected {
   color: #ec5242;
+}
+header .nav-container-botton .campaign {
+  background-color: transparent;
+  border: 4px solid #ec5242;
 }
 
 main .container-first {
@@ -212,11 +217,25 @@ main .container-main-program .container-program-section .section4 {
 main .container-main-program .container-program-section .section5 {
   grid-template: job5;
 }
+main .container-main-program .hole-program {
+  padding-bottom: 1em;
+}
 main .container-main-program .program-link {
   color: #f5f5f5;
   font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
+}
+main .container-main-program .btn-join {
+  color: #f5f5f5;
+  font-size: 1em;
+  font-weight: 700;
+  font-size: 1.6em;
+  background-color: #ec5242;
+  width: 100%;
+}
+main .container-main-program .join {
+  display: none;
 }
 main .master {
   margin: 0 12vw;
@@ -363,4 +382,112 @@ li {
 
 p, h3, h4 {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-areas: "section1" "section2" "section3" "section4";
+    width: 100vw;
+  }
+  main .container-first {
+    grid-area: section1;
+  }
+  main .container-first .first {
+    margin: 0 1.4rem;
+  }
+  main .container-first .container-quote {
+    font-size: 2.2em;
+  }
+  main .container-first .container-title h1 {
+    font-size: 5.4em;
+  }
+  main .container-first .container-info, main .container-first .container-date {
+    width: 100%;
+  }
+  main .container-main-program {
+    grid-area: section2;
+    height: 100vh;
+  }
+  main .container-main-program .main-program {
+    margin: 0 1.4rem;
+    height: 100vh;
+  }
+  main .container-main-program .container-program-section {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(1fr, 6);
+    grid-template-areas: "program1" "program2" "program3" "program4" "program5" "program6";
+    height: 70%;
+    row-gap: 10px;
+  }
+  main .container-main-program .container-program-section .section1 {
+    grid-area: program1;
+  }
+  main .container-main-program .container-program-section .section2 {
+    grid-area: program2;
+  }
+  main .container-main-program .container-program-section .section3 {
+    grid-area: program3;
+  }
+  main .container-main-program .container-program-section .section4 {
+    grid-area: program4;
+  }
+  main .container-main-program .container-program-section .section5 {
+    grid-area: program5;
+  }
+  main .container-main-program .container-program-section .general-section {
+    display: flex;
+    align-items: center;
+    padding: 2em 1.6em;
+  }
+  main .container-main-program .hole-program {
+    width: 72%;
+    height: 4.3rem;
+  }
+  main .container-main-program .program-link {
+    display: none;
+  }
+  main .container-main-program .join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .container-main-program .container-program-section .section1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .container-program-section .section2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .container-program-section .section3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .container-program-section .section4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .container-program-section .section5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .container-first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
 }

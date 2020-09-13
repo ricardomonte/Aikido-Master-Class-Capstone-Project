@@ -107,10 +107,24 @@ main {
         grid-template: job5;
       }
     }
+
+    .hole-program {
+      padding-bottom: 1em;
+    }
   
     .program-link {
       @include programText;
       text-transform: uppercase;
+    }
+
+    .btn-join {
+      @include programText;
+      font-size: 1.6em;
+      background-color: $secundary-color;
+      width: 100%;
+    }
+    .join {
+      display: none;
     }
   }
 

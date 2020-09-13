@@ -131,3 +131,24 @@
   width: 150px;
   height: 150px;
 }
+
+@mixin mediaMd {
+  @media screen and(max-width: $breakpoint-Md) {
+    @content;
+  }
+}
+
+@mixin gridMd {
+  display: grid;
+  grid-template-columns: 100vw;
+
+}
+
+@function set-grid($temp){
+  @if ($temp == 4) {
+    @return repeat(1fr, 4);
+  } @else {
+    @return repeat(1fr, 6);
+  }
+  
+}
