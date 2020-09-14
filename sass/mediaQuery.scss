@@ -1,4 +1,26 @@
+
 @include mediaMd {
+  header {
+
+    .bottom-header {
+      margin: 0 1.4rem;
+      
+
+      .img-logo {
+      display: none;
+      }
+    }
+      
+    .campaign {
+      display: none;
+    } 
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+    
+  }
+
   main {
     @include gridMd;
     grid-template-rows: set-grid($rows);
@@ -33,10 +55,11 @@
       }
       .container-program-section {
         @include gridMd;
-        grid-template-rows: set-grid($rows1);
-        grid-template-areas: $templateMd1;
+        grid-template-rows: set-grid($rows5);
+        grid-template-areas: $templateMdRow5;
         height: 70%;
         row-gap: 10px;
+
 
         .section1 {
           grid-area: program1;
@@ -81,19 +104,20 @@
     .master {
       grid-area: section3;
       margin: 0 1.4rem;
-      height: 47vh;
-      overflow: hidden;
+      height: 50vh;
       
       .container-master {
         @include gridMd;
         grid-template-rows: set-grid($rows1);
-        grid-template-areas: $templateMd1;
+        grid-template-areas: $templateMdRow2;
         row-gap: 20px;
         width: 100vw;
       }
 
       .master-info {
-        width: 100%;
+        width: 90%;
+        margin-bottom: 100px;
+        height: 52px;
       }
 
       .master1 {
@@ -102,20 +126,69 @@
       .master2 {
         grid-area: program2;
       }
-      .master3 {
-        grid-area: program3;
+      
+      .none {
+        display: none;
       }
-      .master4 {
-        grid-area: program4;
-      }
-      .master5 {
-        grid-area: program5;
-      }
-      .master6 {
-        grid-area: program6;
+
+      
+    }
+
+    #display-none {
+      display: none;
+    }
+
+    .display-btn { 
+      display: flex;
+      justify-content: center;
+      margin: 0 1.4rem;
+
+
+      button {
+        height: 52px;
+        width: 100%;
+        background-color: transparent;
+        text-transform: uppercase;
+        span {
+          margin: 0 0 0 10px;
+          
+          i {
+            color: $secundary-color;
+          }
+        }
       }
     }
 
+    .more-master {
+      height: 100%;
+      margin: 20px 0;
+    }
+
+    .partners {
+      padding: 2em 0;
+
+      .container-partners {
+        margin: 0 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 20px;
+        justify-content: center;
+      }
+    }
   }
-  
+}
+
+@include mediaLg {
+  header {
+    .bottom-header img {
+      display: block;
+    }
+  }
+
+  main{
+    #no-display {
+      display: none;
+    }
+  }  
 }

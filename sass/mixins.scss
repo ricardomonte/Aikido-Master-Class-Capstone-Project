@@ -138,6 +138,12 @@
   }
 }
 
+@mixin mediaLg {
+  @media screen and(min-width: $breakpoint-Lg) {
+    @content
+  }
+}
+
 @mixin gridMd {
   display: grid;
   grid-template-columns: 100vw;

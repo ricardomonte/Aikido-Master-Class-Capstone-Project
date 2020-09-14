@@ -44,6 +44,15 @@ header {
     }
   }
 
+  .navbar-toggler {
+    .line {
+      background-color: $secundary-color;
+      margin-bottom: 5px;
+      width: 50px;
+      height: 10px;
+      border-radius: 5%;
+    }
+  }
   .nav-container-botton {
     @include rowMenu;
     width: 100%;
@@ -68,5 +77,6 @@ header {
       background-color: transparent;
       border: 4px solid $secundary-color;
     }
+    
   }
 }

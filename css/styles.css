@@ -44,6 +44,13 @@ header .img-logo, header .img-logo img {
   width: 150px;
   height: 116px;
 }
+header .navbar-toggler .line {
+  background-color: #ec5242;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 10px;
+  border-radius: 5%;
+}
 header .nav-container-botton {
   display: flex;
   justify-content: flex-end;
@@ -385,6 +392,20 @@ p, h3, h4 {
 }
 
 @media screen and (max-width: 767px) {
+  header .bottom-header {
+    margin: 0 1.4rem;
+  }
+  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
+    display: none;
+  }
+  header .campaign {
+    display: none;
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+  }
+
   main {
     display: grid;
     grid-template-columns: 100vw;
@@ -419,7 +440,7 @@ p, h3, h4 {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: repeat(1fr, 5);
-    grid-template-areas: "program1" "program2" "program3" "program4" "program5" "program6";
+    grid-template-areas: "program1" "program2" "program3" "program4" "program5";
     height: 70%;
     row-gap: 10px;
   }
@@ -459,19 +480,20 @@ p, h3, h4 {
   main .master {
     grid-area: section3;
     margin: 0 1.4rem;
-    height: 47vh;
-    overflow: hidden;
+    height: 50vh;
   }
   main .master .container-master {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: repeat(1fr, 5);
-    grid-template-areas: "program1" "program2" "program3" "program4" "program5" "program6";
+    grid-template-rows: repeat(1fr, 2);
+    grid-template-areas: "program1" "program2";
     row-gap: 20px;
     width: 100vw;
   }
   main .master .master-info {
-    width: 100%;
+    width: 90%;
+    margin-bottom: 100px;
+    height: 52px;
   }
   main .master .master1 {
     grid-area: program1;
@@ -479,17 +501,43 @@ p, h3, h4 {
   main .master .master2 {
     grid-area: program2;
   }
-  main .master .master3 {
-    grid-area: program3;
+  main .master .none {
+    display: none;
   }
-  main .master .master4 {
-    grid-area: program4;
+  main #display-none {
+    display: none;
   }
-  main .master .master5 {
-    grid-area: program5;
+  main .display-btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 1.4rem;
   }
-  main .master .master6 {
-    grid-area: program6;
+  main .display-btn button {
+    height: 52px;
+    width: 100%;
+    background-color: transparent;
+    text-transform: uppercase;
+  }
+  main .display-btn button span {
+    margin: 0 0 0 10px;
+  }
+  main .display-btn button span i {
+    color: #ec5242;
+  }
+  main .more-master {
+    height: 100%;
+    margin: 20px 0;
+  }
+  main .partners {
+    padding: 2em 0;
+  }
+  main .partners .container-partners {
+    margin: 0 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
   }
 }
 
@@ -514,23 +562,11 @@ p, h3, h4 {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
-  main .master .container-master > .section3 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
   main .container-main-program .container-program-section .section4 {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
   }
-  main .master .container-master > .section4 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-  }
   main .container-main-program .container-program-section .section5 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
-  main .master .container-master > .section5 {
     -ms-grid-row: 9;
     -ms-grid-column: 1;
   }
@@ -550,51 +586,31 @@ p, h3, h4 {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
-  main .master .master3 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-  main .master .container-master > .master3 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-  }
-  main .master .master4 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-  }
-  main .master .container-master > .master4 {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-  }
-  main .master .master5 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
-  main .master .container-master > .master5 {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
-  }
-  main .master .master6 {
-    -ms-grid-row: 11;
-    -ms-grid-column: 1;
-  }
-  main .master .container-master > .master6 {
-    -ms-grid-row: 11;
-    -ms-grid-column: 1;
-  }
 }
 
 @media screen and (max-width: 767px) {
+
   main .container-first {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
+
   main .container-main-program {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
+
   main .master {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .bottom-header img {
+    display: block;
+  }
+
+  main #no-display {
+    display: none;
   }
 }
