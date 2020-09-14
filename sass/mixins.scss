@@ -60,7 +60,7 @@
   background-size: contain;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 6.4em;
+  
 }
 
 @mixin textBase {
@@ -104,8 +104,8 @@
   margin:0.8rem;
 }
 
-@mixin programText {
-  color: $fifth-color;
+@mixin programText ($color) {
+  color: $color;
   font-size: 1em;
   font-weight: 700;
 }

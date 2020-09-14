@@ -85,7 +85,7 @@ main {
           @include programTitle;
         }
         h4 {
-          @include programText;
+          @include programText ($fifth-color);
         }
       }
     
@@ -111,12 +111,12 @@ main {
     }
   
     .program-link {
-      @include programText;
+      @include programText($fifth-color);
       text-transform: uppercase;
     }
 
     .btn-join {
-      @include programText;
+      @include programText($fifth-color);
       font-size: 1.6em;
       background-color: $secundary-color;
       width: 100%;
