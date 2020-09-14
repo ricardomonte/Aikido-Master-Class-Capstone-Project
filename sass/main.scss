@@ -15,10 +15,7 @@ main {
         @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Fstart, $jus-sAround);
       }
     }
-
-
     
-
     .container-quote {
       font-size: 3em;
       color: saturate($secundary-color, 100%);
@@ -32,6 +29,8 @@ main {
 
       h1 {
         @include clip;
+        font-size: 6.4em;
+        font-weight: 900;
       }
     }
 
@@ -212,5 +211,197 @@ main {
   }
 } 
 
+@include mediaMd {
+  header {
 
+    .bottom-header {
+      margin: 0 1.4rem;
+      
+
+      .img-logo {
+      display: none;
+      }
+    }
+      
+    .campaign {
+      display: none;
+    } 
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+    
+  }
+
+  main {
+    @include gridMd;
+    grid-template-rows: set-grid($rows);
+    grid-template-areas: $templateMd;
+    width: 100vw;
+
+    .container-first {
+      grid-area: section1;
+
+      .first{
+        margin: 0 1.4rem;
+      }
+      .container-quote {
+        font-size: 2.2em;
+      }
+
+      .container-title h1 {
+        font-size: 5.4em;
+      }
+
+      .container-info, .container-date {
+        width: 100%;
+      }
+    }
+    .container-main-program {
+      grid-area: section2;
+      height: 100vh;
+
+      .main-program {
+        margin: 0 1.4rem;
+        height: 100vh;
+      }
+      .container-program-section {
+        @include gridMd;
+        grid-template-rows: set-grid($rows5);
+        grid-template-areas: $templateMdRow5;
+        height: 70%;
+        row-gap: 10px;
+
+
+        .section1 {
+          grid-area: program1;
+        }
+        .section2 {
+          grid-area: program2;
+        }
+        .section3 {
+          grid-area: program3;
+        }
+        .section4 {
+          grid-area: program4;
+        }
+        .section5 {
+          grid-area: program5;
+        }
+
+        .general-section {
+          display: flex;
+          align-items: center;
+          padding: 2em 1.6em;
+        }
+      }
+
+      .hole-program {
+        width: 72%;
+        height: 4.3rem;
+      }
+
+      .program-link {
+        display: none;
+      }
+      
+      .join {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.3rem;
+      }
+    }
+
+    .master {
+      grid-area: section3;
+      margin: 0 1.4rem;
+      height: 50vh;
+      
+      .container-master {
+        @include gridMd;
+        grid-template-rows: set-grid($rows1);
+        grid-template-areas: $templateMdRow2;
+        row-gap: 20px;
+        width: 100vw;
+      }
+
+      .master-info {
+        width: 90%;
+        margin-bottom: 100px;
+        height: 52px;
+      }
+
+      .master1 {
+        grid-area: program1;
+      }
+      .master2 {
+        grid-area: program2;
+      }
+      
+      .none {
+        display: none;
+      }
+
+      
+    }
+
+    #display-none {
+      display: none;
+    }
+
+    .display-btn { 
+      display: flex;
+      justify-content: center;
+      margin: 0 1.4rem;
+
+
+      button {
+        height: 52px;
+        width: 100%;
+        background-color: transparent;
+        text-transform: uppercase;
+        span {
+          margin: 0 0 0 10px;
+          
+          i {
+            color: $secundary-color;
+          }
+        }
+      }
+    }
+
+    .more-master {
+      height: 100%;
+      margin: 20px 0;
+    }
+
+    .partners {
+      padding: 2em 0;
+
+      .container-partners {
+        margin: 0 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 20px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include mediaLg {
+  header {
+    .bottom-header img {
+      display: block;
+    }
+  }
+
+  main{
+    #no-display {
+      display: none;
+    }
+  }  
+}
 
