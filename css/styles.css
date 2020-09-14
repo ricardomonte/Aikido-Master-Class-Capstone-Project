@@ -390,6 +390,10 @@ main .container-info__about {
 main .container-info__about p {
   padding: 2vw 2.5em;
 }
+main .container-info__about .container-date__about {
+  width: 100%;
+  text-align: center;
+}
 
 * {
   margin-top: 0;
