@@ -78,7 +78,7 @@ header .nav-container-botton .campaign {
 }
 
 main .container-first {
-  background: url(/img/aikido1.jpg);
+  background: url(../img/aikido1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -105,7 +105,7 @@ main .container-first .first .container-first-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
 }
 main .container-first .container-quote {
   font-size: 3em;
@@ -171,10 +171,8 @@ main .container-main-program .main-program {
 main .container-main-program .main-program:nth-child(1) {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   text-align: center;
 }
 main .container-main-program h2 {
@@ -248,8 +246,6 @@ main .master {
   margin: 0 12vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
   align-items: center;
   justify-content: space-around;
   height: 100vh;
@@ -360,6 +356,39 @@ footer .container-footer {
 footer img {
   width: 150px;
   height: 150px;
+}
+
+main .container-first__about {
+  background: #f5f5f5;
+}
+main .container-first__about .first__about .container-first-info__about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main .container-first__about .first__about .container-info__about {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  border: 2px solid rgba(105, 105, 105, 0.5);
+}
+main .about-quote {
+  display: none;
+}
+main .container-title__about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main .container-info__about {
+  width: 100%;
+  line-height: 1.8em;
+}
+main .container-info__about p {
+  padding: 2vw 2.5em;
 }
 
 * {

@@ -1,0 +1,36 @@
+main {
+  .container-first__about {
+    @include background ($fifth-color);
+  
+    .first__about {
+      .container-first-info__about {
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+      }
+
+      .container-info__about {
+        width: 100%;
+        text-align: center;
+        @include background ($bgd-white);
+        border: 2px solid rgba($fourth-color, 0.5);
+      }
+  
+    }
+  }
+
+  .about-quote {
+    display: none;
+  }
+
+  .container-title__about {
+    @include columnFLex-main ($d-flex, $flex-direcRow, $ali-Center, $jus-Center);
+    text-align: center;
+  }
+
+  .container-info__about {
+    width: 100%;
+    line-height: 1.8em;
+    p {
+      padding: 2vw 2.5em;
+    }
+  }
+}

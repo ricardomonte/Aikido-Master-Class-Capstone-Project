@@ -1,6 +1,6 @@
 main {
   .container-first {
-    @include background;
+    @include background ('url(../img/aikido1.jpg)');
   
     .first {
       position: relative;
@@ -12,7 +12,7 @@ main {
       .container-first-info {
         position: absolute;
         height: $h-firstSecction;
-        @include columnFLex-main;
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Fstart, $jus-sAround);
       }
     }
 
@@ -64,9 +64,7 @@ main {
       @include posAb;
 
       &:nth-child(1) {
-        @include columnFLex-main;
-        justify-content: space-around;
-        align-items: center;
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
         text-align: center;
       }
     }
@@ -130,9 +128,7 @@ main {
 
   .master {
     @include containerPage;
-    @include columnFLex-main;
-    align-items: center;
-    justify-content: space-around;
+    @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
     height: 100vh;
 
     h2 {

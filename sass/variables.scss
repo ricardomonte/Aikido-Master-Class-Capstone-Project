@@ -16,8 +16,6 @@ $font-lato: 'Lato', sans-serif;
 $font-coco-border: 'Cocogoose-border';
 $font-coco-regular: 'Cocogoose-regular';
 
-$d-flex: flex;
-
 //height header
 
 $h-topHeader: 5vh;
@@ -26,6 +24,8 @@ $h-bottomHeader: 15vh;
 // first secction height
 
 $h-firstSecction: 92vh;
+
+//grid
 
 $rows: 4;
 $rows1: 2;
@@ -40,6 +40,22 @@ $templateMdRow2: 'program1' 'program2';
 $templateMdRow4: 'program1' 'program2' 'program3' 'program4';
 
 $templateMdRow5: 'program1' 'program2' 'program3' 'program4' 'program5';
+
+//flex 
+
+$d-flex: flex;
+$flex-direcRow: row;
+$flex-direcCol: column;
+$ali-Center: center;
+$ali-Fstart: flex-start;
+$ali-fEnd: flex-end;
+$jus-Center: center;
+$jus-sBetween: space-between;
+$jus-sAround: space-around;
+
+
+
+
 
 
 

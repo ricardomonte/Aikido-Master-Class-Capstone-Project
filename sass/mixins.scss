@@ -2,11 +2,11 @@
   margin: 0 12vw;
 }
 
-@mixin columnFLex-main {
-  display: $d-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+@mixin columnFLex-main ($flex, $direction, $align, $justify) {
+  display: $flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin rowMenu {
@@ -27,20 +27,29 @@
   align-items: center;
 }
 
-@mixin background {
-  background: url(/img/aikido1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 20vh;
-    right: 0;
-    height: $h-firstSecction;
-    width: 100%;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(245,245,245,0.8169467616148022) 0%, rgb(245,245,245) 60%);
+@mixin color-bg ($color) {
+  background-color: $color;
+}
+
+@mixin background ($color) {
+  @if $color == 'url(../img/aikido1.jpg)'{
+    background: url(../img/aikido1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 20vh;
+      right: 0;
+      height: $h-firstSecction;
+      width: 100%;
+      background: rgb(255,255,255);
+      background: linear-gradient(180deg, rgba(245,245,245,0.8169467616148022) 0%, rgb(245,245,245) 60%);
+    }
+  }
+  @else{
+    background: $color;
   }
 }
 
@@ -140,7 +149,7 @@
 
 @mixin mediaLg {
   @media screen and(min-width: $breakpoint-Lg) {
-    @content
+    @content;
   }
 }
 
