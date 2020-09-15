@@ -5,14 +5,15 @@ main {
     .first {
       position: relative;
       @include containerPage;
-      height: $h-firstSecction;
+      height: 100vh;
       z-index: 1;
-      
+      min-height: 57rem;
 
       .container-first-info {
         position: absolute;
-        height: $h-firstSecction;
+        top: 0;
         @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Fstart, $jus-sAround);
+        height: 100%;
       }
     }
     
@@ -57,9 +58,10 @@ main {
     height: 68vh;
     @include backgroundMprogram;
     @include rowCenter;
+    min-height: 42rem;
     
     .main-program {
-      height: 68vh;
+      height: 100%;
       @include posAb;
 
       &:nth-child(1) {

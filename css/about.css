@@ -11,7 +11,7 @@ header {
   width: 100%;
 }
 header .top-header {
-  height: 5vh;
+  height: 30%;
   background-color: #272a31;
 }
 header .nav-container, header .bottom-header {
@@ -33,7 +33,7 @@ header .nav-li .li-link {
   color: #d3d3d3;
 }
 header .bottom-header {
-  height: 15vh;
+  height: 60%;
   justify-content: space-between;
   width: 75%;
 }

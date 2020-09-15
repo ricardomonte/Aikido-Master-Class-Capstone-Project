@@ -11,7 +11,7 @@ header {
   width: 100%;
 }
 header .top-header {
-  height: 5vh;
+  height: 30%;
   background-color: #272a31;
 }
 header .nav-container, header .bottom-header {
@@ -33,7 +33,7 @@ header .nav-li .li-link {
   color: #d3d3d3;
 }
 header .bottom-header {
-  height: 15vh;
+  height: 60%;
   justify-content: space-between;
   width: 75%;
 }
@@ -86,26 +86,29 @@ main .container-first {
 main .container-first:after {
   content: "";
   position: absolute;
-  top: 20vh;
+  top: 158px;
   right: 0;
-  height: 92vh;
+  height: 100vh;
   width: 100%;
   background: white;
   background: linear-gradient(180deg, rgba(245, 245, 245, 0.8169467616) 0%, whitesmoke 60%);
+  min-height: 57rem;
 }
 main .container-first .first {
   position: relative;
   margin: 0 12vw;
-  height: 92vh;
+  height: 100vh;
   z-index: 1;
+  min-height: 57rem;
 }
 main .container-first .first .container-first-info {
   position: absolute;
-  height: 92vh;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  height: 100%;
 }
 main .container-first .container-quote {
   font-size: 3em;
@@ -149,6 +152,7 @@ main .container-main-program {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 42rem;
 }
 main .container-main-program:after {
   content: "";
@@ -161,12 +165,8 @@ main .container-main-program:after {
   z-index: -1;
 }
 main .container-main-program .main-program {
-  height: 68vh;
+  height: 100%;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: 0 12vw;
 }
 main .container-main-program .main-program:nth-child(1) {

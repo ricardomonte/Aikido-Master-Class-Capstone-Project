@@ -40,12 +40,13 @@
     &:after {
       content: "";
       position: absolute;
-      top: 20vh;
+      top: 158px;
       right: 0;
-      height: $h-firstSecction;
+      height: 100vh;
       width: 100%;
       background: rgb(255,255,255);
       background: linear-gradient(180deg, rgba(245,245,245,0.8169467616148022) 0%, rgb(245,245,245) 60%);
+      min-height: 57rem;
     }
   }
   @else{
@@ -112,10 +113,6 @@
 
 @mixin posAb {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   @include containerPage();
 }
 

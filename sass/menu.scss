@@ -3,7 +3,7 @@ header {
   width: 100%;
 
   .top-header {
-    height: 5vh;
+    height: 30%;
     background-color: $primary-color;
   }
 
@@ -26,7 +26,7 @@ header {
   }
 
   .bottom-header {
-    height: $h-bottomHeader;
+    height: 60%;
     @extend .nav-container;
     justify-content: space-between;
     width: 75%;
