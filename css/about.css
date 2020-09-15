@@ -488,27 +488,6 @@ main .partners .container-partners .brand img {
   main .display {
     display: block;
   }
-  main .display-btn {
-    display: flex;
-    justify-content: center;
-    margin: 0 1.4rem;
-  }
-  main .display-btn button {
-    height: 52px;
-    width: 100%;
-    background-color: transparent;
-    text-transform: uppercase;
-  }
-  main .display-btn button span {
-    margin: 0 0 0 10px;
-  }
-  main .display-btn button span i {
-    color: #ec5242;
-  }
-  main .more-master {
-    height: 100%;
-    margin: 20px 0;
-  }
   main .partners {
     padding: 2em 0;
     background: #f5f5f5;

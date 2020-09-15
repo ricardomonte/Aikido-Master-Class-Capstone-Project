@@ -399,32 +399,6 @@ main {
       display: block;
     }
 
-    .display-btn { 
-      display: flex;
-      justify-content: center;
-      margin: 0 1.4rem;
-
-
-      button {
-        height: 52px;
-        width: 100%;
-        background-color: transparent;
-        text-transform: uppercase;
-        span {
-          margin: 0 0 0 10px;
-          
-          i {
-            color: $secundary-color;
-          }
-        }
-      }
-    }
-
-    .more-master {
-      height: 100%;
-      margin: 20px 0;
-    }
-
     .partners {
       padding: 2em 0;
       @include background($fifth-color);
