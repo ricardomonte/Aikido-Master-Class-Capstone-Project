@@ -132,16 +132,18 @@ main .container-first {
 main .container-first .first {
   position: relative;
   margin: 0 12vw;
-  height: 92vh;
+  height: 100ch;
+  min-height: 57rem;
   z-index: 1;
 }
 main .container-first .first .container-first-info {
   position: absolute;
-  height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  top: 0;
+  height: 100%;
 }
 main .container-first .container-quote {
   font-size: 3em;
@@ -180,12 +182,13 @@ main .container-first .container-date {
   text-align: center;
 }
 main .container-main-program {
-  height: 50vh;
+  height: 80ch;
   border-bottom: 2px solid rgba(105, 105, 105, 0.5);
+  min-width: 40rem;
 }
 main .container-main-program .main-program {
   margin: 0 12vw;
-  height: 100%;
+  height: 90%;
 }
 main .container-main-program .main-program:nth-child(1) {
   display: flex;
@@ -216,8 +219,8 @@ main .container-main-program .container-program-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 80%;
+  justify-content: space-between;
+  height: 70%;
 }
 main .container-main-program .container-program-section .general-section {
   padding: 1.5rem;
@@ -241,7 +244,7 @@ main .master {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 70vh;
+  height: 60ch;
   padding: 100px 0;
 }
 main .master h2 {

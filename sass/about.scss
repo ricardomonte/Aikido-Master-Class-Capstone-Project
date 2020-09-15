@@ -47,14 +47,17 @@ main {
     .first {
       position: relative;
       @include containerPage;
-      height: $h-firstSecction;
+      height: 100ch;
+      min-height: 57rem;
       z-index: 1;
+
       
 
       .container-first-info {
         position: absolute;
-        height: $h-firstSecction;
         @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+        top: 0;
+        height: 100%;
       }
     }
     .container-quote {
@@ -98,11 +101,13 @@ main {
     }
   }
   .container-main-program {
-    height: 50vh;
+    height: 80ch;
     border-bottom: 2px solid rgba($fourth-color, 50%);
+    min-width: 40rem;
+
     .main-program {
       @include containerPage;
-      height: 100%;
+      height: 90%;
 
       &:nth-child(1) {
         @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
@@ -121,8 +126,8 @@ main {
     }
 
     .container-program-section {
-      @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
-      height: 80%;
+      @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sBetween);
+      height: 70%;
       
       .general-section {
         padding: 1.5rem;
@@ -145,7 +150,7 @@ main {
   .master {
     @include containerPage;
     @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
-    height: 70vh;
+    height: 60ch;
     padding: 100px 0;
 
     h2 {
