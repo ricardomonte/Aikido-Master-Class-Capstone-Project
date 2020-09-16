@@ -260,26 +260,6 @@ main {
 } 
 
 @include mediaMd {
-  header {
-
-    .bottom-header {
-      margin: 0 1.4rem;
-      
-
-      .img-logo {
-      display: none;
-      }
-    }
-      
-    .campaign {
-      display: none;
-    } 
-  }
-
-  header .nav-container-botton .nav-ul-bottom {
-    width: 100%;
-    
-  }
   main {
 
     @include gridMd;

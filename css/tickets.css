@@ -78,6 +78,28 @@ header .nav-container-botton .campaign {
   border: 4px solid #ec5242;
 }
 
+@media screen and (max-width: 767px) {
+  header .bottom-header {
+    margin: 0 1.4rem;
+  }
+  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
+    display: none;
+  }
+  header .campaign {
+    display: none;
+  }
+  header .container-menu {
+    position: absolute;
+    top: 87px;
+    z-index: 2;
+    background: #fff;
+    left: 0;
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+  }
+}
 footer {
   background-color: rgba(245, 245, 245, 0.2);
 }
@@ -397,20 +419,6 @@ main .partners .container-partners .brand img {
 }
 
 @media screen and (max-width: 767px) {
-  header .bottom-header {
-    margin: 0 1.4rem;
-  }
-  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
-    display: none;
-  }
-  header .campaign {
-    display: none;
-  }
-
-  header .nav-container-botton .nav-ul-bottom {
-    width: 100%;
-  }
-
   main {
     display: grid;
     grid-template-columns: 100%;
@@ -509,7 +517,6 @@ main .partners .container-partners .brand img {
 }
 
 @media screen and (max-width: 767px){
-
   main .container-first {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -522,7 +529,6 @@ main .partners .container-partners .brand img {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-
   main .container-main-program {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -535,7 +541,6 @@ main .partners .container-partners .brand img {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-
   main .container-main-program .main-program .container-date table thead {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -548,7 +553,6 @@ main .partners .container-partners .brand img {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-
   main .container-main-program .main-program .container-date table tbody {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -561,7 +565,6 @@ main .partners .container-partners .brand img {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
   }
-
   main .container-main-program .main-program .container-date table tbody .position1 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -574,7 +577,6 @@ main .partners .container-partners .brand img {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-
   main .container-main-program .main-program .container-date table tbody .position2 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;

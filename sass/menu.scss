@@ -80,3 +80,34 @@ header {
     
   }
 }
+
+@include mediaMd {
+  header {
+
+    .bottom-header {
+      margin: 0 1.4rem;
+      
+
+      .img-logo {
+      display: none;
+      }
+    }
+      
+    .campaign {
+      display: none;
+    }
+    
+    .container-menu {
+      position: absolute;
+      top: 87px;
+      z-index: 2;
+      @include background($bgd-white);
+      left: 0;
+    }
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+    
+  }
+}

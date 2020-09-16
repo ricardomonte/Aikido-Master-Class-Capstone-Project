@@ -33,7 +33,7 @@
 
 @mixin background ($color, $top: null) {
   @if $top != null {
-    background: url(../img/aikido1.jpg);
+    background: url(../img/christiantissier.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -45,7 +45,7 @@
       height: 100vh;
       width: 100%;
       background: rgb(255,255,255);
-      background: linear-gradient(180deg, rgba(245,245,245,0.8169467616148022) 0%, rgb(245,245,245) 60%);
+      background: linear-gradient(180deg, rgba(245,245,245,0.6169467616148022) 0%, rgb(245,245,245) 60%);
       min-height: 57rem;
     }
   }
