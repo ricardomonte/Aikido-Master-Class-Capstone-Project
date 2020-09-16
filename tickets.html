@@ -51,17 +51,13 @@
       <div class="first">
         <!-- center -->
         <div class="container-first-info">
-          <div class="container-quote about-quote">
-            <!-- display none big -->
-            <p>"We learn from everyone"</p> 
-          </div>
           <div class="container-title">
             <h1>Select Tickets</h1>
           </div>
           <div class="container-info">
             <p><span>Lorem</span> ipsum dolor, sit amet consectetur adipisicing elit. Enim?</p>
           </div>
-          <div class="container-date">
+          <div class="container-date none">
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -81,21 +77,137 @@
                 </tr>
                 <tr>
                   <th scope="row">Normal</th>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
                 </tr>
                 <tr class="last-row">
                   <th scope="row">Student</th>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
-                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="spay" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="spay" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="spay" id=""></div></td>
+                  <td ><div class="select"><span>&euro;100</span><input type="radio" name="spay" id=""></div></td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    One Day Ticket
+                  </button>
+                </h2>
+              </div>         
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">           
+                  <div class="container-date">
+                    <table class="">
+                      <thead>
+                        <tr>
+                          <th colspan="4">1-Day Ticket</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="2"><div class="select"><span>Normal</span><input type="radio" name="student" id=""></div></td>
+                          <td colspan="2"><div class="select"><span>Student</span><input type="radio" name="student" id=""></div></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><div class="select"><span>13 Nov</span><input type="radio" name="day" id=""></div></td>
+                          <td colspan="2"><div class="select"><span>14 Nov</span><input type="radio" name="day" id=""></div></td>
+                        </tr>
+                        <tr>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Two Days Ticket
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">              
+                  <div class="container-date">
+                    <table class="">
+                      <thead>
+                        <tr>
+                          <th colspan="4">2-Day Ticket</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="2"><div class="select"><span>Normal</span><input type="radio" name="student" id=""></div></td>
+                          <td colspan="2"><div class="select"><span>Student</span><input type="radio" name="student" id=""></div></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><div class="select"><span>13~14 Nov</span><input type="radio" name="day" id=""></div></td>
+                          <td colspan="2"><div class="select"><span>14~15 Nov</span><input type="radio" name="day" id=""></div></td>
+                        </tr>
+                        <tr>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td ><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Full Weekend Ticket
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  
+                  <div class="car-body container-date">
+                    <table class="">
+                      <thead>
+                        <tr>
+                          <th colspan="4">Full Weekend</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="2"><div class="select"><span>Normal</span><input type="radio" name="student" id=""></div></td>
+                          <td colspan="2"><div class="select"><span>Student</span><input type="radio" name="student" id=""></div></td>
+                        </tr>
+                        <tr>
+                          <td colspan="4"><div class="select"><span>13~14~15 Nov</span><input type="radio" name="day" id=""></div></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                          <td colspan="2"><div class="select"><span>&euro;100</span><input type="radio" name="pay" id=""></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div> 
         </div>
       </div>
     </section>
@@ -113,10 +225,10 @@
             </thead>
             <tbody>
               <tr>
-                <td ><div class="select"><span>Menu 1</span><input type="radio" name="" id=""></div></td>
-                <td ><div class="select"><span>Menu 2</span><input type="radio" name="" id=""></div></td>
-                <td ><div class="select"><span>Menu 3</span><input type="radio" name="" id=""></div></td>
-                <td ><div class="select"><span>Menu 4</span><input type="radio" name="" id=""></div></td>
+                <td ><div class="select position1"><span>Menu 1</span><input type="radio" name="lunch" id=""></div></td>
+                <td ><div class="select position2"><span>Menu 2</span><input type="radio" name="lunch" id=""></div></td>
+                <td ><div class="select position3"><span>Menu 3</span><input type="radio" name="lunch" id=""></div></td>
+                <td ><div class="select position4"><span>Menu 4</span><input type="radio" name="lunch" id=""></div></td>
               </tr>
             </tbody>
           </table>
@@ -130,14 +242,15 @@
             </thead>
             <tbody>
               <tr>
-                <td ><div class="select"><span>Menu 1</span><input type="radio" name="" id=""></div></td>
-                <td ><div class="select"><span>Menu 2</span><input type="radio" name="" id=""></div></td>
-                <td ><div class="select"><span>Menu 3</span><input type="radio" name="" id=""></div></td>
-                <td ><div class="select"><span>Menu 4</span><input type="radio" name="" id=""></div></td>
+                <td ><div class="select"><span>Menu 1</span><input type="radio" name="dinner" id=""></div></td>
+                <td ><div class="select"><span>Menu 2</span><input type="radio" name="dinner" id=""></div></td>
+                <td ><div class="select"><span>Menu 3</span><input type="radio" name="dinner" id=""></div></td>
+                <td ><div class="select"><span>Menu 4</span><input type="radio" name="dinner" id=""></div></td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>  
     </section>
   </main>
   <footer class="dark-footer">

@@ -128,12 +128,10 @@ main {
 
     .main-program {
       @include containerPage;
-      height: 90%;
-
-      &:nth-child(1) {
-        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
-        text-align: center;
-      }
+      height: 90%;  
+      @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+      text-align: center;
+    
     }
 
     .main-program-title {
@@ -277,3 +275,125 @@ main {
     }
   }
 } 
+
+@include mediaMd {
+  header {
+
+    .bottom-header {
+      margin: 0 1.4rem;
+      
+
+      .img-logo {
+      display: none;
+      }
+    }
+      
+    .campaign {
+      display: none;
+    } 
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+    
+  }
+  main {
+
+    @include gridMd;
+    grid-template-rows: set-grid($rows2);
+    grid-template-areas: $templateMdRow2;
+    width: 100vw;
+    .container-first {
+      grid-area: program1;
+
+      .first{
+        margin: 0 1.4rem;
+        height: 70ch;
+      }
+
+      .container-info {
+        width: 66vw;
+        min-width: 10%;
+        text-align: center;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .container-date {
+        width: 100%;
+        
+        table {
+          width: 100%;
+        }
+      }
+    }
+    .container-main-program {
+      grid-area: program2;
+      height: 68rem;
+      min-width: 0;
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "";
+        font-size: 46px;
+        position: absolute;
+        left: 50%;
+        top: 715px;
+        color: #ec5242;
+      }
+      .main-program {
+        margin: 0 1.4rem;
+        height: 100%;
+
+        .container-date {
+          width: 100%;
+          padding-bottom: 20px;
+
+          table {
+            @include gridMd;
+            grid-template-rows: set-grid($rows2);
+            grid-template-areas: $templateMdRow2;
+
+            thead {
+              grid-area: program1;
+              height: 7em;
+              @include columnFLex-main($d-flex, $flex-direcRow, $ali-Center, $jus-Center)
+            }
+
+            tbody {
+              grid-area: program2;
+              
+              tr {
+                @include gridMd;
+                grid-template-rows: set-grid($rows);
+                grid-template-areas: $templateMdRow4;
+              }
+
+              .position1 {
+                grid-area: program1;
+              }
+              .position2 {
+                grid-area: program2;
+              }
+              .position3 {
+                grid-area: program3;
+              }
+              .position4 {
+                grid-area: program4;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@include mediaLg {
+  .accordion {
+    display: none;
+  }
+}

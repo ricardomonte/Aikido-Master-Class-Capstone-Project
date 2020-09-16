@@ -360,7 +360,7 @@ main .partners .container-partners .brand img {
 
   main {
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(1fr, 4);
     grid-template-areas: "section1" "section2" "section3" "section4";
     width: 100vw;
@@ -390,7 +390,7 @@ main .partners .container-partners .brand img {
   }
   main .container-main-program .container-program-section {
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(1fr, 5);
     grid-template-areas: "program1" "program2" "program3" "program4" "program5";
     height: 70%;
@@ -436,8 +436,8 @@ main .partners .container-partners .brand img {
   }
   main .master .container-master {
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: repeat(1fr, 2);
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(1fr, 1);
     grid-template-areas: "program1" "program2";
     row-gap: 20px;
     width: 100vw;

@@ -222,8 +222,6 @@ main .container-main-program:before {
 main .container-main-program .main-program {
   margin: 0 12vw;
   height: 90%;
-}
-main .container-main-program .main-program:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,4 +394,201 @@ main .partners .container-partners .brand:after {
 main .partners .container-partners .brand img {
   width: 150px;
   height: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  header .bottom-header {
+    margin: 0 1.4rem;
+  }
+  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
+    display: none;
+  }
+  header .campaign {
+    display: none;
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(1fr, 2);
+    grid-template-areas: "program1" "program2";
+    width: 100vw;
+  }
+  main .container-first {
+    grid-area: program1;
+  }
+  main .container-first .first {
+    margin: 0 1.4rem;
+    height: 70ch;
+  }
+  main .container-first .container-info {
+    width: 66vw;
+    min-width: 10%;
+    text-align: center;
+  }
+  main .container-first .none {
+    display: none;
+  }
+  main .container-first .container-date {
+    width: 100%;
+  }
+  main .container-first .container-date table {
+    width: 100%;
+  }
+  main .container-main-program {
+    grid-area: program2;
+    height: 68rem;
+    min-width: 0;
+  }
+  main .container-main-program:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    font-size: 46px;
+    position: absolute;
+    left: 50%;
+    top: 715px;
+    color: #ec5242;
+  }
+  main .container-main-program .main-program {
+    margin: 0 1.4rem;
+    height: 100%;
+  }
+  main .container-main-program .main-program .container-date {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  main .container-main-program .main-program .container-date table {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(1fr, 2);
+    grid-template-areas: "program1" "program2";
+  }
+  main .container-main-program .main-program .container-date table thead {
+    grid-area: program1;
+    height: 7em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  main .container-main-program .main-program .container-date table tbody {
+    grid-area: program2;
+  }
+  main .container-main-program .main-program .container-date table tbody tr {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-areas: "program1" "program2" "program3" "program4";
+  }
+  main .container-main-program .main-program .container-date table tbody .position1 {
+    grid-area: program1;
+  }
+  main .container-main-program .main-program .container-date table tbody .position2 {
+    grid-area: program2;
+  }
+  main .container-main-program .main-program .container-date table tbody .position3 {
+    grid-area: program3;
+  }
+  main .container-main-program .main-program .container-date table tbody .position4 {
+    grid-area: program4;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+  main .container-first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table > .container-first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody tr > .container-first {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  main .container-main-program {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table > .container-main-program {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody tr > .container-main-program {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  main .container-main-program .main-program .container-date table thead {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table > thead {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody tr > thead {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  main .container-main-program .main-program .container-date table tbody {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table > tbody {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody tr > tbody {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  main .container-main-program .main-program .container-date table tbody .position1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table > .position1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody tr > .position1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  main .container-main-program .main-program .container-date table tbody .position2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table > .position2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody tr > .position2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody .position3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  main .container-main-program .main-program .container-date table tbody .position4 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .accordion {
+    display: none;
+  }
 }
