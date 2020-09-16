@@ -37,31 +37,32 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    &:after {
+
+    &::after {
       content: "";
       position: absolute;
       top: $top;
       right: 0;
       height: 100vh;
       width: 100%;
-      background: rgb(255,255,255);
-      background: linear-gradient(180deg, rgba(245,245,245,0.6169467616148022) 0%, rgb(245,245,245) 60%);
+      background: rgb(255, 255, 255);
+      background: linear-gradient(180deg, rgba(245, 245, 245, 0.6169467616148022) 0%, rgb(245, 245, 245) 60%);
       min-height: 57rem;
     }
   }
-  @if $color != null{
+
+  @if $color != null {
     background: $color;
   }
 }
 
-@mixin clip{
-  background: linear-gradient(180deg, rgba(saturate($secundary-color,100%),0.99) 0%, rgba(saturate($secundary-color,100%),0.8) 77%), url(../img/aikido2.png);
+@mixin clip {
+  background: linear-gradient(180deg, rgba(saturate($secundary-color, 100%), 0.99) 0%, rgba(saturate($secundary-color, 100%), 0.8) 77%), url(../img/aikido2.png);
   background-repeat: no-repeat;
-  background-position:0px 5px;
+  background-position: 0 5px;
   background-size: contain;
   -webkit-background-clip: text;
   color: transparent;
-  
 }
 
 @mixin textBase {
@@ -73,7 +74,8 @@
 @mixin h2 {
   font-size: 1.8em;
   font-weight: 700;
-  &:after {
+
+  &::after {
     content: '___';
     display: flex;
     justify-content: center;
@@ -84,8 +86,8 @@
 @mixin backgroundMprogram {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALUlEQVQYlWNQUtH8z0AAwNXgU4whh00xTgPUtQz/I2OcbhkghUR5hqjgITbAAeEyKTnSw6pPAAAAAElFTkSuQmCC) repeat;
   background-size: 3%;
-  
-  &:after {
+
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -94,7 +96,6 @@
     height: 100%;
     background-color: $primary-color;
     z-index: -1;
-
   }
 }
 
@@ -102,7 +103,7 @@
   color: $secundary-color;
   font-size: 1.2em;
   font-weight: 700;
-  margin:0.8rem;
+  margin: 0.8rem;
 }
 
 @mixin programText ($color) {
@@ -113,18 +114,19 @@
 
 @mixin posAb {
   position: absolute;
+
   @include containerPage();
 }
 
 @mixin grid {
   display: grid;
-  grid-template-columns: repeat(1fr, 5);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: $template1;
 }
 
 @mixin h3 {
   font-size: 1.5em;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 @mixin h5 {
@@ -153,10 +155,8 @@
 @mixin gridMd {
   display: grid;
   grid-template-columns: 100%;
-
 }
 
-@function set-grid($temp){
+@function set-grid($temp) {
   @return repeat(1fr, $temp);
 }
-  

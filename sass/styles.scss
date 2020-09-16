@@ -5,18 +5,16 @@
 @import 'main';
 @import 'footer';
 
-
 * {
   margin-top: 0;
   box-sizing: border-box;
 }
 
 body {
-
   font-family: $font-lato;
 
   h1 {
-    font-family:$font-coco-regular;
+    font-family: $font-coco-regular;
   }
 }
 
@@ -37,8 +35,8 @@ li {
   list-style: none;
 }
 
-p, h3, h4 {
+p,
+h3,
+h4 {
   margin-bottom: 0;
 }
-
-

@@ -79,6 +79,11 @@ header .nav-container-botton .campaign {
 }
 
 @media screen and (max-width: 767px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
   header .bottom-header {
     margin: 0 1.4rem;
   }
@@ -234,7 +239,7 @@ main .container-main-program h2 {
   font-weight: 700;
   color: #696969;
 }
-main .container-main-program h2:after {
+main .container-main-program h2::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -276,7 +281,7 @@ main .master h2 {
   font-size: 1.8em;
   font-weight: 700;
 }
-main .master h2:after {
+main .master h2::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -363,7 +368,7 @@ main .partners h2 {
   font-weight: 700;
   color: #d3d3d3;
 }
-main .partners h2:after {
+main .partners h2::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -372,7 +377,7 @@ main .partners h2:after {
 main .partners .container-partners {
   margin: 0 12vw;
   display: grid;
-  grid-template-columns: repeat(1fr, 5);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "job1 job2 job3 job4 job5";
 }
 main .partners .container-partners .brand {

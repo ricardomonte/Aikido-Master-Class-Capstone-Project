@@ -80,6 +80,11 @@ header .nav-container-botton .campaign {
 }
 
 @media screen and (max-width: 767px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
   header .bottom-header {
     margin: 0 1.4rem;
   }
@@ -144,7 +149,9 @@ li {
   list-style-type: none;
 }
 
-p, h3, h4 {
+p,
+h3,
+h4 {
   margin-bottom: 0;
 }
 
@@ -183,7 +190,7 @@ main .container-first .container-title h1 {
   font-weight: 700;
   color: #696969;
 }
-main .container-first .container-title h1:after {
+main .container-first .container-title h1::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -202,7 +209,7 @@ main .container-first .container-info span {
   color: #ec5242;
   margin-right: 10px;
 }
-main .container-first .container-info span:before {
+main .container-first .container-info span::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
@@ -219,7 +226,7 @@ main .container-first .container-date {
 main .container-first .container-date tbody {
   background: #fff;
 }
-main .container-first .container-date .select {
+main .container-first .container-date .radio {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,7 +239,7 @@ main .container-main-program {
   height: 80ch;
   min-width: 40rem;
 }
-main .container-main-program:before {
+main .container-main-program::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
@@ -263,7 +270,7 @@ main .container-main-program h2 {
   font-weight: 700;
   color: #696969;
 }
-main .container-main-program h2:after {
+main .container-main-program h2::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -303,7 +310,7 @@ main .master h2 {
   font-size: 1.8em;
   font-weight: 700;
 }
-main .master h2:after {
+main .master h2::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -338,7 +345,7 @@ main .master .master-img {
   background-repeat: no-repeat;
   background-position: center;
 }
-main .master .master-img:after {
+main .master .master-img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -390,7 +397,7 @@ main .partners h2 {
   font-weight: 700;
   color: #d3d3d3;
 }
-main .partners h2:after {
+main .partners h2::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -399,13 +406,13 @@ main .partners h2:after {
 main .partners .container-partners {
   margin: 0 12vw;
   display: grid;
-  grid-template-columns: repeat(1fr, 5);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "job1 job2 job3 job4 job5";
 }
 main .partners .container-partners .brand {
   position: relative;
 }
-main .partners .container-partners .brand:after {
+main .partners .container-partners .brand::after {
   content: "";
   position: absolute;
   top: 0;
@@ -462,7 +469,7 @@ main .partners .container-partners .brand img {
     height: 68rem;
     min-width: 0;
   }
-  main .container-main-program:before {
+  main .container-main-program::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "";

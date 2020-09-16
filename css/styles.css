@@ -79,6 +79,11 @@ header .nav-container-botton .campaign {
 }
 
 @media screen and (max-width: 767px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
   header .bottom-header {
     margin: 0 1.4rem;
   }
@@ -106,7 +111,7 @@ main .container-first {
   background-size: cover;
   background-position: center;
 }
-main .container-first:after {
+main .container-first::after {
   content: "";
   position: absolute;
   top: 148px;
@@ -127,11 +132,11 @@ main .container-first .first {
 main .container-first .first .container-first-info {
   position: absolute;
   top: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  height: 100%;
 }
 main .container-first .container-quote {
   font-size: 3em;
@@ -145,7 +150,7 @@ main .container-first .container-title {
 main .container-first .container-title h1 {
   background: linear-gradient(180deg, rgba(255, 67, 47, 0.99) 0%, rgba(255, 67, 47, 0.8) 77%), url(../img/aikido2.png);
   background-repeat: no-repeat;
-  background-position: 0px 5px;
+  background-position: 0 5px;
   background-size: contain;
   -webkit-background-clip: text;
   color: transparent;
@@ -177,7 +182,7 @@ main .container-main-program {
   align-items: center;
   min-height: 42rem;
 }
-main .container-main-program:after {
+main .container-main-program::after {
   content: "";
   position: absolute;
   top: 0;
@@ -199,12 +204,12 @@ main .container-main-program .main-program:nth-child(1) {
   justify-content: space-around;
   text-align: center;
 }
-main .container-main-program h2 {
+main .container-main-program .program-text {
   font-size: 1.8em;
   font-weight: 700;
   color: whitesmoke;
 }
-main .container-main-program h2:after {
+main .container-main-program .program-text::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -212,7 +217,7 @@ main .container-main-program h2:after {
 }
 main .container-main-program .container-program-section {
   display: grid;
-  grid-template-columns: repeat(1fr, 5);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "job1 job2 job3 job4 job5";
   column-gap: 10px;
 }
@@ -232,19 +237,19 @@ main .container-main-program .container-program-section .general-section h4 {
   font-weight: 700;
 }
 main .container-main-program .container-program-section .section1 {
-  grid-template: job1;
+  grid-template: "job1";
 }
 main .container-main-program .container-program-section .section2 {
-  grid-template: job2;
+  grid-template: "job2";
 }
 main .container-main-program .container-program-section .section3 {
-  grid-template: job3;
+  grid-template: "job3";
 }
 main .container-main-program .container-program-section .section4 {
-  grid-template: job4;
+  grid-template: "job4";
 }
 main .container-main-program .container-program-section .section5 {
-  grid-template: job5;
+  grid-template: "job5";
 }
 main .container-main-program .hole-program {
   padding-bottom: 1em;
@@ -274,11 +279,11 @@ main .master {
   justify-content: space-around;
   padding-bottom: 20px;
 }
-main .master h2 {
+main .master .master-title {
   font-size: 1.8em;
   font-weight: 700;
 }
-main .master h2:after {
+main .master .master-title::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -287,12 +292,12 @@ main .master h2:after {
 main .master .container-master {
   height: 75%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 main .master .img-size {
   width: 150px;
@@ -300,31 +305,30 @@ main .master .img-size {
 }
 main .master .master-info {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
   width: 45%;
 }
 main .master .master-text {
   margin-left: 20px;
 }
-main .master h3 {
+main .master .master-name {
   font-size: 1.5em;
   font-weight: 700;
 }
-main .master h5 {
+main .master .master-city {
   font-size: 1em;
   font-weight: 700;
   color: #ec5242;
 }
-main .master h5:after {
+main .master .master-city::after {
   content: "___";
   display: flex;
   justify-content: flex-start;
   color: rgba(105, 105, 105, 0.2);
 }
-main .master p {
+main .master .master-resume {
   font-weight: 700;
   font-size: 0.8em;
 }
@@ -333,12 +337,12 @@ main .partners {
   text-align: center;
   padding: 4em 0;
 }
-main .partners h2 {
+main .partners .partnet-title {
   font-size: 1.8em;
   font-weight: 700;
   color: #d3d3d3;
 }
-main .partners h2:after {
+main .partners .partnet-title::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -347,13 +351,13 @@ main .partners h2:after {
 main .partners .container-partners {
   margin: 0 12vw;
   display: grid;
-  grid-template-columns: repeat(1fr, 5);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "job1 job2 job3 job4 job5";
 }
 main .partners .container-partners .brand {
   position: relative;
 }
-main .partners .container-partners .brand:after {
+main .partners .container-partners .brand::after {
   content: "";
   position: absolute;
   top: 0;
@@ -382,7 +386,7 @@ main .partners .container-partners .brand img {
     background-position: center;
     grid-area: section1;
   }
-  main .container-first:after {
+  main .container-first::after {
     content: "";
     position: absolute;
     top: 87px;
@@ -409,7 +413,8 @@ main .partners .container-partners .brand img {
   main .container-first .container-title h1 {
     font-size: 4em;
   }
-  main .container-first .container-info, main .container-first .container-date {
+  main .container-first .container-info,
+main .container-first .container-date {
     width: 100%;
   }
   main .container-main-program {
@@ -640,6 +645,8 @@ li {
   list-style: none;
 }
 
-p, h3, h4 {
+p,
+h3,
+h4 {
   margin-bottom: 0;
 }
