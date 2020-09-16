@@ -125,9 +125,6 @@ p, h3, h4 {
   margin-bottom: 0;
 }
 
-main .container-first {
-  background: #f5f5f5;
-}
 main .container-first .first {
   margin: 0 12vw;
   height: 60ch;
@@ -193,9 +190,6 @@ main .container-first .container-date {
   width: 80%;
   text-align: center;
 }
-main .container-first .container-date tbody {
-  background: #fff;
-}
 main .container-first .container-date .select {
   display: flex;
   flex-direction: column;
@@ -254,9 +248,6 @@ main .container-main-program .container-date {
   width: 80%;
   text-align: center;
   border: 1px solid #d3d3d3;
-}
-main .container-main-program .container-date thead {
-  background: #d3d3d3;
 }
 main .container-main-program .container-date .select {
   display: flex;

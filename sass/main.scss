@@ -1,6 +1,6 @@
 main {
   .container-first {
-    @include background ('url(../img/aikido1.jpg)');
+    @include background ($color-null, $toplg);
   
     .first {
       position: relative;
@@ -242,30 +242,41 @@ main {
     width: 100vw;
 
     .container-first {
+      @include background ($color-null, $topmd);
       grid-area: section1;
 
       .first{
         margin: 0 1.4rem;
+        height: 57em;
       }
+
+      .container-first-info {
+        height: 57em;
+      }
+
       .container-quote {
         font-size: 2.2em;
       }
 
-      .container-title h1 {
-        font-size: 5.4em;
+      .container-title {
+        min-width: 365px;
+        h1 {
+          font-size: 4em;
+        }
       }
 
       .container-info, .container-date {
         width: 100%;
       }
     }
+
     .container-main-program {
       grid-area: section2;
-      height: 100vh;
+      height: 80em;
 
       .main-program {
         margin: 0 1.4rem;
-        height: 100vh;
+        height: 100%;
       }
       .container-program-section {
         @include gridMd;
@@ -318,20 +329,19 @@ main {
     .master {
       grid-area: section3;
       margin: 0 1.4rem;
-      height: 50vh;
+      min-height: 34rem;
       
       .container-master {
         @include gridMd;
         grid-template-rows: set-grid($rows1);
         grid-template-areas: $templateMdRow2;
         row-gap: 20px;
-        width: 100vw;
+        width: 100%;
+        height: 50%;
       }
 
       .master-info {
-        width: 90%;
-        margin-bottom: 100px;
-        height: 52px;
+        width: 100%;
       }
 
       .master1 {
@@ -376,6 +386,7 @@ main {
     .more-master {
       height: 100%;
       margin: 20px 0;
+      margin: 0 1.4rem;
     }
 
     .partners {

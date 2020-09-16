@@ -366,27 +366,49 @@ main .partners .container-partners .brand img {
     width: 100vw;
   }
   main .container-first {
+    background: url(../img/aikido1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     grid-area: section1;
+  }
+  main .container-first:after {
+    content: "";
+    position: absolute;
+    top: 97px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.8169467616) 0%, whitesmoke 60%);
+    min-height: 57rem;
   }
   main .container-first .first {
     margin: 0 1.4rem;
+    height: 57em;
+  }
+  main .container-first .container-first-info {
+    height: 57em;
   }
   main .container-first .container-quote {
     font-size: 2.2em;
   }
+  main .container-first .container-title {
+    min-width: 365px;
+  }
   main .container-first .container-title h1 {
-    font-size: 5.4em;
+    font-size: 4em;
   }
   main .container-first .container-info, main .container-first .container-date {
     width: 100%;
   }
   main .container-main-program {
     grid-area: section2;
-    height: 100vh;
+    height: 80em;
   }
   main .container-main-program .main-program {
     margin: 0 1.4rem;
-    height: 100vh;
+    height: 100%;
   }
   main .container-main-program .container-program-section {
     display: grid;
@@ -432,7 +454,7 @@ main .partners .container-partners .brand img {
   main .master {
     grid-area: section3;
     margin: 0 1.4rem;
-    height: 50vh;
+    min-height: 34rem;
   }
   main .master .container-master {
     display: grid;
@@ -440,12 +462,11 @@ main .partners .container-partners .brand img {
     grid-template-rows: repeat(1fr, 1);
     grid-template-areas: "program1" "program2";
     row-gap: 20px;
-    width: 100vw;
+    width: 100%;
+    height: 50%;
   }
   main .master .master-info {
-    width: 90%;
-    margin-bottom: 100px;
-    height: 52px;
+    width: 100%;
   }
   main .master .master1 {
     grid-area: program1;
@@ -479,6 +500,7 @@ main .partners .container-partners .brand img {
   main .more-master {
     height: 100%;
     margin: 20px 0;
+    margin: 0 1.4rem;
   }
   main .partners {
     padding: 2em 0;

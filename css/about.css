@@ -126,9 +126,6 @@ p, h3, h4 {
   margin-bottom: 0;
 }
 
-main .container-first {
-  background: #f5f5f5;
-}
 main .container-first .first {
   position: relative;
   margin: 0 12vw;
@@ -161,7 +158,7 @@ main .container-first .container-title {
   text-align: center;
 }
 main .container-first .container-title h1 {
-  font-size: 6.4em;
+  font-size: 6em;
   color: #ff432f;
   font-weight: 900;
 }
@@ -391,6 +388,7 @@ main .partners .container-partners .brand img {
   }
   main .container-first {
     grid-area: section1;
+    min-width: 365px;
   }
   main .container-first .first {
     margin: 0 1.4rem;
@@ -398,15 +396,19 @@ main .partners .container-partners .brand img {
   main .container-first .container-quote {
     font-size: 2.2em;
   }
+  main .container-first .container-title {
+    min-width: 365px;
+  }
   main .container-first .container-title h1 {
-    font-size: 5.4em;
+    font-size: 12vw;
   }
   main .container-first .container-info, main .container-first .container-date {
     width: 100%;
   }
   main .container-main-program {
     grid-area: section2;
-    height: 100vh;
+    height: 100%;
+    min-width: 365px;
   }
   main .container-main-program .main-program {
     margin: 0 1.4rem;
@@ -490,7 +492,6 @@ main .partners .container-partners .brand img {
   }
   main .partners {
     padding: 2em 0;
-    background: #f5f5f5;
   }
   main .partners .container-partners {
     margin: 0 1.4rem;

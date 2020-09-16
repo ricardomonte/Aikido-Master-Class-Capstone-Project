@@ -31,8 +31,8 @@
   background-color: $color;
 }
 
-@mixin background ($color) {
-  @if $color == 'url(../img/aikido1.jpg)'{
+@mixin background ($color, $top: null) {
+  @if $top != null {
     background: url(../img/aikido1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,7 +40,7 @@
     &:after {
       content: "";
       position: absolute;
-      top: 158px;
+      top: $top;
       right: 0;
       height: 100vh;
       width: 100%;
@@ -49,7 +49,7 @@
       min-height: 57rem;
     }
   }
-  @else{
+  @if $color == null {
     background: $color;
   }
 }

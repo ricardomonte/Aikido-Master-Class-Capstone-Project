@@ -76,7 +76,7 @@ main {
       
 
       h1 {
-        font-size: 6.4em;
+        font-size: 6em;
         color: saturate($secundary-color , 100%);
         font-weight: 900;
       }
@@ -286,8 +286,11 @@ main {
     grid-template-rows: set-grid($rows);
     grid-template-areas: $templateMd;
     width: 100vw;
+
+
     .container-first {
       grid-area: section1;
+      min-width: 365px;
 
       .first{
         margin: 0 1.4rem;
@@ -296,8 +299,11 @@ main {
         font-size: 2.2em;
       }
 
-      .container-title h1 {
-        font-size: 5.4em;
+      .container-title {
+        min-width: 365px;
+        h1 {
+          font-size: 12vw;
+        }
       }
 
       .container-info, .container-date {
@@ -306,7 +312,8 @@ main {
     }
     .container-main-program {
       grid-area: section2;
-      height: 100vh;
+      height: 100%;
+      min-width: 365px;
 
       .main-program {
         margin: 0 1.4rem;
