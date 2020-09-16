@@ -15,6 +15,10 @@ It was designed for the capstone project for the HTML/CSS module in the Microver
 - Normalizer
 - Microverse linters.
 
+##  :movie_camera: Presentation Video:
+
+[Video Presentation](https://www.loom.com/share/a43b50ee473b4e91b8aefea9975b6e83)
+
 ##  :red_circle: Live Demo:
 
 [Live demo](https://ricardomonte.github.io/Aikido-Master-Class-Capstone-Project/.)
