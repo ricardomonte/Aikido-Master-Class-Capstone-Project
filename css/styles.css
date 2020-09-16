@@ -249,7 +249,7 @@ main .master {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 100vh;
+  padding-bottom: 20px;
 }
 main .master h2 {
   font-size: 1.8em;

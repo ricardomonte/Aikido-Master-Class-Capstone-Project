@@ -130,7 +130,7 @@ main {
   .master {
     @include containerPage;
     @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
-    height: 100vh;
+    padding-bottom: 20px;
 
     h2 {
       @include h2;
