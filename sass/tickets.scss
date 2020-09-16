@@ -302,19 +302,31 @@ main {
     @include gridMd;
     grid-template-rows: set-grid($rows2);
     grid-template-areas: $templateMdRow2;
-    width: 100vw;
+    width: 100%;
     .container-first {
       grid-area: program1;
 
       .first{
         margin: 0 1.4rem;
         height: 70ch;
+        
+        .container-first-info {
+          height: 90%;
+        }
       }
 
       .container-info {
         width: 66vw;
         min-width: 10%;
         text-align: center;
+      }
+
+      .accordion {
+        width: 100%;
+        
+        button {
+          text-align: center !important;
+        }
       }
 
       .none {

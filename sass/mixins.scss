@@ -49,7 +49,7 @@
       min-height: 57rem;
     }
   }
-  @if $color == null {
+  @if $color != null{
     background: $color;
   }
 }

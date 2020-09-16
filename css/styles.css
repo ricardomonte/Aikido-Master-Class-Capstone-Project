@@ -86,7 +86,7 @@ main .container-first {
 main .container-first:after {
   content: "";
   position: absolute;
-  top: 158px;
+  top: 148px;
   right: 0;
   height: 100vh;
   width: 100%;
@@ -375,7 +375,7 @@ main .partners .container-partners .brand img {
   main .container-first:after {
     content: "";
     position: absolute;
-    top: 97px;
+    top: 87px;
     right: 0;
     height: 100vh;
     width: 100%;
