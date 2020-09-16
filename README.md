@@ -17,7 +17,7 @@ It was designed for the capstone project for the HTML/CSS module in the Microver
 
 ##  :red_circle: Live Demo:
 
-[Live demo](https://ricardomonte.github.io/HTML_Forms/.)
+[Live demo](https://ricardomonte.github.io/Capstone-Project/)
 
 ##  :construction_worker: Getting Started
 
@@ -38,7 +38,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues here](https://github.com/kcotrinam92/Embedding-images-and-video/issues).
+Feel free to check the [issues here](https://github.com/ricardomonte/Capstone-Project/issues).
 
 ## Show your support
 
@@ -49,7 +49,7 @@ Give a :star: if you like this project!.
 - To [Microverse](https://www.microverse.org/)
 - Mentor.
 - Stand up team
-- [Cindy Shin](https://www.behance.net/adagio07)
+- [Cindy Shin](https://www.behance.net/adagio07) for the design
 
 ##  :memo: License
 
