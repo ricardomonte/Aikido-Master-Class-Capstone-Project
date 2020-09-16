@@ -46,6 +46,7 @@ header .img-logo, header .img-logo img {
   height: 116px;
 }
 header .navbar-toggler .line {
+  display: block;
   background-color: #ec5242;
   margin-bottom: 5px;
   width: 50px;

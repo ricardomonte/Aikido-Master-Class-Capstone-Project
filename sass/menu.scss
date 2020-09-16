@@ -46,6 +46,7 @@ header {
 
   .navbar-toggler {
     .line {
+      display: block;
       background-color: $secundary-color;
       margin-bottom: 5px;
       width: 50px;
