@@ -1,6 +1,6 @@
-# Aikido United Capstone Project
+# Aikido Master Class Capstone Project
 
-Aikido United is based in the design idea of [Cindy Shin](https://www.behance.net/adagio07) [CC Global Commons 2015](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) . 
+Aikido Master Class is based in the design idea of [Cindy Shin](https://www.behance.net/adagio07) [CC Global Commons 2015](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) . 
 It was designed for the capstone project for the HTML/CSS module in the Microverse curriculum.
 
 
