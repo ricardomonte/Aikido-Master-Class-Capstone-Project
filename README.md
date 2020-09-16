@@ -17,7 +17,7 @@ It was designed for the capstone project for the HTML/CSS module in the Microver
 
 ##  :red_circle: Live Demo:
 
-[Live demo](https://ricardomonte.github.io/Capstone-Project/)
+[Live demo](https://ricardomonte.github.io/Aikido-Master-Class-Capstone-Project/.)
 
 ##  :construction_worker: Getting Started
 
