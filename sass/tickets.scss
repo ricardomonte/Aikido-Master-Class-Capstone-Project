@@ -91,7 +91,7 @@ main {
         margin-right: 10px;
 
         &::before {
-          font-family: "Font Awesome 5 Free";
+          font-family: "Font Awesome 5 Free", sans-serif;
           font-weight: 900;
           content: "\f12a";
           padding: 0 10px;
@@ -124,7 +124,7 @@ main {
     min-width: 40rem;
 
     &::before {
-      font-family: "Font Awesome 5 Free";
+      font-family: "Font Awesome 5 Free", sans-serif;
       font-weight: 900;
       content: "\f564";
       font-size: 46px;
@@ -352,7 +352,8 @@ main {
       min-width: 0;
 
       &::before {
-        font-family: "Font Awesome 5 Free";
+        display: block;
+        font-family: 'Font Awesome 5 Free', sans-serif;
         font-weight: 900;
         content: "";
         font-size: 46px;
