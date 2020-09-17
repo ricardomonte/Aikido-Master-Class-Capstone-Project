@@ -4,7 +4,7 @@ Aikido Master Class is based in the design idea of [Cindy Shin](https://www.beha
 It was designed for the capstone project for the HTML/CSS module in the Microverse curriculum.
 
 
-![website screenshots](/img/Screenshotf.png)
+![website screenshots](img/Showcase.png)
 
 ##  :hammer: Built with:
 
