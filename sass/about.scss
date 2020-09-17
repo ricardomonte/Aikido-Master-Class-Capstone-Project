@@ -93,9 +93,12 @@ main {
       padding: 0.6em;
       width: 100%;
       line-height: 1.8em;
+      text-align: center;
 
-      p {
+      .info-amcw {
         padding: 2vw 2.5em;
+
+        @include programText($fourth-color);
       }
     }
 
@@ -165,11 +168,14 @@ main {
     @include containerPage;
     @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
 
-    height: 60ch;
+    height: 80vh;
+    min-height: 30rem;
     padding: 100px 0;
 
-    h2 {
+    .master-title {
       @include h2;
+
+      color: $fourth-color;
     }
 
     .container-master {
@@ -254,7 +260,7 @@ main {
     text-align: center;
     padding: 4em 0;
 
-    h2 {
+    .partner-title {
       @include h2;
 
       color: $third-color;
@@ -266,6 +272,8 @@ main {
 
       .brand {
         position: relative;
+        width: 150px;
+        height: 150px;
 
         &::after {
           content: '';
@@ -277,8 +285,10 @@ main {
           background-color: rgba($fourth-color, 0.8);
         }
 
-        img {
-          @include imgSize;
+        .brand-img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -291,7 +301,7 @@ main {
 
     grid-template-rows: set-grid($rows);
     grid-template-areas: $templateMd;
-    width: 100vw;
+    width: 100%;
 
     .container-first {
       grid-area: section1;
@@ -322,7 +332,9 @@ main {
     .container-main-program {
       grid-area: section2;
       height: 100%;
+      width: 100%;
       min-width: 365px;
+      min-height: 50rem;
 
       .main-program {
         margin: 0 1.4rem;
@@ -369,7 +381,13 @@ main {
     .master {
       grid-area: section3;
       margin: 0 1.4rem;
-      height: 64ch;
+      padding: 14px 0;
+
+      .master-title {
+        @include h2;
+
+        color: $fourth-color;
+      }
 
       .container-master {
         @include gridMd;
@@ -382,6 +400,8 @@ main {
 
       .master-text {
         grid-area: program1;
+        text-align: center;
+        padding-bottom: 0.8em;
       }
 
       .master-info {
@@ -425,6 +445,12 @@ main {
         column-gap: 50px;
         row-gap: 20px;
         justify-content: center;
+
+        .brand {
+          &::after {
+            background-color: rgba($fifth-color, 0.8);
+          }
+        }
       }
     }
   }

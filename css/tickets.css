@@ -41,17 +41,21 @@ header .bottom-header {
 header .container-menu {
   width: 100%;
 }
-header .img-logo, header .img-logo img {
-  width: 150px;
+header .img-logo {
+  width: 116px;
   height: 116px;
+}
+header .img-logo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 header .navbar-toggler .line {
   display: block;
   background-color: #ec5242;
   margin-bottom: 5px;
-  width: 50px;
-  height: 10px;
-  border-radius: 5%;
+  width: 40px;
+  height: 5px;
 }
 header .nav-container-botton {
   display: flex;
@@ -85,10 +89,13 @@ header .nav-container-botton .campaign {
     top: 0;
     z-index: 5;
   }
+  header .top-header {
+    display: none;
+  }
   header .bottom-header {
     margin: 0 1.4rem;
   }
-  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
+  header .bottom-header .img-logo {
     display: none;
   }
   header .campaign {
@@ -96,7 +103,7 @@ header .nav-container-botton .campaign {
   }
   header .container-menu {
     position: absolute;
-    top: 87px;
+    top: 39px;
     z-index: 2;
     background: #fff;
     left: 0;
@@ -210,7 +217,7 @@ main .container-first .container-info span {
   margin-right: 10px;
 }
 main .container-first .container-info span::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
   content: "";
   padding: 0 10px;
@@ -240,13 +247,13 @@ main .container-main-program {
   min-width: 40rem;
 }
 main .container-main-program::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
   content: "";
   font-size: 46px;
   position: absolute;
   left: 50%;
-  top: 681px;
+  top: 655px;
   color: #ec5242;
 }
 main .container-main-program .main-program {
@@ -470,13 +477,14 @@ main .partners .container-partners .brand img {
     min-width: 0;
   }
   main .container-main-program::before {
-    font-family: "Font Awesome 5 Free";
+    display: block;
+    font-family: "Font Awesome 5 Free", sans-serif;
     font-weight: 900;
     content: "";
     font-size: 46px;
     position: absolute;
     left: 50%;
-    top: 715px;
+    top: 670px;
     color: #ec5242;
   }
   main .container-main-program .main-program {

@@ -40,17 +40,21 @@ header .bottom-header {
 header .container-menu {
   width: 100%;
 }
-header .img-logo, header .img-logo img {
-  width: 150px;
+header .img-logo {
+  width: 116px;
   height: 116px;
+}
+header .img-logo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 header .navbar-toggler .line {
   display: block;
   background-color: #ec5242;
   margin-bottom: 5px;
-  width: 50px;
-  height: 10px;
-  border-radius: 5%;
+  width: 40px;
+  height: 5px;
 }
 header .nav-container-botton {
   display: flex;
@@ -84,10 +88,13 @@ header .nav-container-botton .campaign {
     top: 0;
     z-index: 5;
   }
+  header .top-header {
+    display: none;
+  }
   header .bottom-header {
     margin: 0 1.4rem;
   }
-  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
+  header .bottom-header .img-logo {
     display: none;
   }
   header .campaign {
@@ -95,7 +102,7 @@ header .nav-container-botton .campaign {
   }
   header .container-menu {
     position: absolute;
-    top: 87px;
+    top: 39px;
     z-index: 2;
     background: #fff;
     left: 0;
@@ -115,7 +122,7 @@ main .container-first::after {
   content: "";
   position: absolute;
   top: 148px;
-  right: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   background: white;
@@ -223,7 +230,7 @@ main .container-main-program .container-program-section {
 }
 main .container-main-program .container-program-section .general-section {
   background-color: rgba(105, 105, 105, 0.2);
-  padding: 2rem;
+  padding: 2rem 1.38rem;
 }
 main .container-main-program .container-program-section .general-section h3 {
   color: #ec5242;
@@ -282,6 +289,8 @@ main .master {
 main .master .master-title {
   font-size: 1.8em;
   font-weight: 700;
+  color: #696969;
+  padding-top: 0.8em;
 }
 main .master .master-title::after {
   content: "___";
@@ -299,9 +308,14 @@ main .master .container-master {
   align-items: center;
   justify-content: space-between;
 }
-main .master .img-size {
+main .master .master-img {
   width: 150px;
   height: 150px;
+}
+main .master .img-size {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 main .master .master-info {
   display: flex;
@@ -316,6 +330,7 @@ main .master .master-text {
 main .master .master-name {
   font-size: 1.5em;
   font-weight: 700;
+  color: #696969;
 }
 main .master .master-city {
   font-size: 1em;
@@ -331,31 +346,38 @@ main .master .master-city::after {
 main .master .master-resume {
   font-weight: 700;
   font-size: 0.8em;
+  color: #696969;
 }
 main .partners {
   background-color: #696969;
   text-align: center;
   padding: 4em 0;
 }
-main .partners .partnet-title {
+main .partners .partners-container {
+  margin: 0 12vw;
+}
+main .partners .partner-title {
   font-size: 1.8em;
   font-weight: 700;
   color: #d3d3d3;
 }
-main .partners .partnet-title::after {
+main .partners .partner-title::after {
   content: "___";
   display: flex;
   justify-content: center;
   color: #ec5242;
 }
 main .partners .container-partners {
-  margin: 0 12vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "job1 job2 job3 job4 job5";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 main .partners .container-partners .brand {
   position: relative;
+  width: 150px;
+  height: 150px;
 }
 main .partners .container-partners .brand::after {
   content: "";
@@ -366,9 +388,12 @@ main .partners .container-partners .brand::after {
   height: 100%;
   background-color: rgba(105, 105, 105, 0.8);
 }
-main .partners .container-partners .brand img {
+main .partners .container-partners .brand .brand-img {
   width: 150px;
   height: 150px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 767px) {
@@ -377,7 +402,7 @@ main .partners .container-partners .brand img {
     grid-template-columns: 100%;
     grid-template-rows: repeat(1fr, 4);
     grid-template-areas: "section1" "section2" "section3" "section4";
-    width: 100vw;
+    width: 100%;
   }
   main .container-first {
     background: url(../img/christiantissier.jpg);
@@ -389,8 +414,8 @@ main .partners .container-partners .brand img {
   main .container-first::after {
     content: "";
     position: absolute;
-    top: 87px;
-    right: 0;
+    top: 39px;
+    left: 0;
     height: 100vh;
     width: 100%;
     background: white;
@@ -408,7 +433,12 @@ main .partners .container-partners .brand img {
     font-size: 2.2em;
   }
   main .container-first .container-title {
-    min-width: 365px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
   main .container-first .container-title h1 {
     font-size: 4em;
@@ -424,6 +454,10 @@ main .container-first .container-date {
   main .container-main-program .main-program {
     margin: 0 1.4rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   main .container-main-program .container-program-section {
     display: grid;
@@ -469,7 +503,8 @@ main .container-first .container-date {
   main .master {
     grid-area: section3;
     margin: 0 1.4rem;
-    min-height: 34rem;
+    height: 100%;
+    min-height: 49rem;
   }
   main .master .container-master {
     display: grid;
@@ -478,7 +513,7 @@ main .container-first .container-date {
     grid-template-areas: "program1" "program2";
     row-gap: 20px;
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
   main .master .master-info {
     width: 100%;
@@ -527,6 +562,15 @@ main .container-first .container-date {
     column-gap: 50px;
     row-gap: 20px;
     justify-content: center;
+  }
+  main .partners .container-partners .brand {
+    width: 150px;
+    height: 150px;
+  }
+  main .partners .container-partners .brand .brand-img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -5,8 +5,6 @@ It was designed for the capstone project for the HTML/CSS module in the Microver
 
 
 ![website screenshots](/img/Screenshot.png)
-![website screenshots](/img/Screenshot1.png)
-![website screenshots](/img/Screenshot2.png)
 
 ##  :hammer: Built with:
 

@@ -40,17 +40,21 @@ header .bottom-header {
 header .container-menu {
   width: 100%;
 }
-header .img-logo, header .img-logo img {
-  width: 150px;
+header .img-logo {
+  width: 116px;
   height: 116px;
+}
+header .img-logo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 header .navbar-toggler .line {
   display: block;
   background-color: #ec5242;
   margin-bottom: 5px;
-  width: 50px;
-  height: 10px;
-  border-radius: 5%;
+  width: 40px;
+  height: 5px;
 }
 header .nav-container-botton {
   display: flex;
@@ -84,10 +88,13 @@ header .nav-container-botton .campaign {
     top: 0;
     z-index: 5;
   }
+  header .top-header {
+    display: none;
+  }
   header .bottom-header {
     margin: 0 1.4rem;
   }
-  header .bottom-header .img-logo, header .bottom-header .img-logo img, header .img-logo .bottom-header img {
+  header .bottom-header .img-logo {
     display: none;
   }
   header .campaign {
@@ -95,7 +102,7 @@ header .nav-container-botton .campaign {
   }
   header .container-menu {
     position: absolute;
-    top: 87px;
+    top: 39px;
     z-index: 2;
     background: #fff;
     left: 0;
@@ -201,9 +208,13 @@ main .container-first .container-info {
   padding: 0.6em;
   width: 100%;
   line-height: 1.8em;
+  text-align: center;
 }
-main .container-first .container-info p {
+main .container-first .container-info .info-amcw {
   padding: 2vw 2.5em;
+  color: #696969;
+  font-size: 1em;
+  font-weight: 700;
 }
 main .container-first .container-date {
   border: 0;
@@ -274,14 +285,16 @@ main .master {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 60ch;
+  height: 80vh;
+  min-height: 30rem;
   padding: 100px 0;
 }
-main .master h2 {
+main .master .master-title {
   font-size: 1.8em;
   font-weight: 700;
+  color: #696969;
 }
-main .master h2::after {
+main .master .master-title::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -363,12 +376,12 @@ main .partners {
   text-align: center;
   padding: 4em 0;
 }
-main .partners h2 {
+main .partners .partner-title {
   font-size: 1.8em;
   font-weight: 700;
   color: #d3d3d3;
 }
-main .partners h2::after {
+main .partners .partner-title::after {
   content: "___";
   display: flex;
   justify-content: center;
@@ -382,6 +395,8 @@ main .partners .container-partners {
 }
 main .partners .container-partners .brand {
   position: relative;
+  width: 150px;
+  height: 150px;
 }
 main .partners .container-partners .brand::after {
   content: "";
@@ -392,9 +407,10 @@ main .partners .container-partners .brand::after {
   height: 100%;
   background-color: rgba(105, 105, 105, 0.8);
 }
-main .partners .container-partners .brand img {
-  width: 150px;
-  height: 150px;
+main .partners .container-partners .brand .brand-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -403,7 +419,7 @@ main .partners .container-partners .brand img {
     grid-template-columns: 100%;
     grid-template-rows: repeat(1fr, 4);
     grid-template-areas: "section1" "section2" "section3" "section4";
-    width: 100vw;
+    width: 100%;
   }
   main .container-first {
     grid-area: section1;
@@ -428,7 +444,9 @@ main .container-first .container-date {
   main .container-main-program {
     grid-area: section2;
     height: 100%;
+    width: 100%;
     min-width: 365px;
+    min-height: 50rem;
   }
   main .container-main-program .main-program {
     margin: 0 1.4rem;
@@ -469,7 +487,18 @@ main .container-first .container-date {
   main .master {
     grid-area: section3;
     margin: 0 1.4rem;
-    height: 64ch;
+    padding: 14px 0;
+  }
+  main .master .master-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #696969;
+  }
+  main .master .master-title::after {
+    content: "___";
+    display: flex;
+    justify-content: center;
+    color: #ec5242;
   }
   main .master .container-master {
     display: grid;
@@ -481,6 +510,8 @@ main .container-first .container-date {
   }
   main .master .master-text {
     grid-area: program1;
+    text-align: center;
+    padding-bottom: 0.8em;
   }
   main .master .master-info {
     grid-area: program2;
@@ -516,6 +547,9 @@ main .container-first .container-date {
     column-gap: 50px;
     row-gap: 20px;
     justify-content: center;
+  }
+  main .partners .container-partners .brand::after {
+    background-color: rgba(245, 245, 245, 0.8);
   }
 }
 

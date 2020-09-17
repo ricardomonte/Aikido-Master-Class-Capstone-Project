@@ -92,7 +92,7 @@ main {
 
       .general-section {
         background-color: rgba($fourth-color, 0.2);
-        padding: 2rem;
+        padding: 2rem 1.38rem;
 
         h3 {
           @include programTitle;
@@ -155,6 +155,9 @@ main {
 
     .master-title {
       @include h2;
+
+      color: $fourth-color;
+      padding-top: 0.8em;
     }
 
     .container-master {
@@ -166,8 +169,14 @@ main {
       @include columnFLex-main($d-flex, $flex-direcRow, $ali-Center, $jus-sBetween);
     }
 
-    .img-size {
+    .master-img {
       @include imgSize;
+    }
+
+    .img-size {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .master-info {
@@ -182,6 +191,8 @@ main {
 
     .master-name {
       @include h3;
+
+      color: $fourth-color;
     }
 
     .master-city {
@@ -198,6 +209,7 @@ main {
     .master-resume {
       font-weight: 700;
       font-size: 0.8em;
+      color: $fourth-color;
     }
   }
 
@@ -206,18 +218,25 @@ main {
     text-align: center;
     padding: 4em 0;
 
-    .partnet-title {
+    .partners-container {
+      @include containerPage;
+    }
+
+    .partner-title {
       @include h2;
 
       color: $third-color;
     }
 
     .container-partners {
-      @include containerPage;
-      @include grid;
+      @include columnFLex-main($d-flex, $flex-direcRow, $ali-Center, $jus-Center);
+
+      flex-wrap: wrap;
 
       .brand {
         position: relative;
+        width: 150px;
+        height: 150px;
 
         &::after {
           content: '';
@@ -229,8 +248,11 @@ main {
           background-color: rgba($fourth-color, 0.8);
         }
 
-        img {
+        .brand-img {
           @include imgSize;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -243,7 +265,7 @@ main {
 
     grid-template-rows: set-grid($rows);
     grid-template-areas: $templateMd;
-    width: 100vw;
+    width: 100%;
 
     .container-first {
       @include background ($color-null, $topmd);
@@ -264,7 +286,10 @@ main {
       }
 
       .container-title {
-        min-width: 365px;
+        height: 100%;
+        width: 100%;
+
+        @include columnFLex-main($d-flex, $flex-direcCol, $ali-Fstart, $jus-Center);
 
         h1 {
           font-size: 4em;
@@ -284,6 +309,8 @@ main {
       .main-program {
         margin: 0 1.4rem;
         height: 100%;
+
+        @include columnFLex-main($d-flex, $flex-direcCol, $ali-Center, $jus-Center);
       }
 
       .container-program-section {
@@ -341,7 +368,8 @@ main {
     .master {
       grid-area: section3;
       margin: 0 1.4rem;
-      min-height: 34rem;
+      height: 100%;
+      min-height: 49rem;
 
       .container-master {
         @include gridMd;
@@ -350,7 +378,7 @@ main {
         grid-template-areas: $templateMdRow2;
         row-gap: 20px;
         width: 100%;
-        height: 50%;
+        height: 100%;
       }
 
       .master-info {
@@ -411,6 +439,17 @@ main {
         column-gap: 50px;
         row-gap: 20px;
         justify-content: center;
+
+        .brand {
+          width: 150px;
+          height: 150px;
+
+          .brand-img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
     }
   }
