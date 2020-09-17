@@ -70,6 +70,9 @@ header .nav-container-botton .nav-ul-bottom {
   justify-content: space-between;
   width: 50%;
 }
+header .nav-container-botton .nav-li-bottom {
+  margin: 0 5px;
+}
 header .nav-container-botton .li-link {
   font-weight: 700;
   color: #696969;
@@ -654,6 +657,7 @@ footer .container-footer {
   align-items: center;
   column-gap: 5em;
   padding: 2em 0;
+  flex-wrap: wrap;
 }
 footer img {
   width: 150px;

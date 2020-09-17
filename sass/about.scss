@@ -302,13 +302,18 @@ main {
     grid-template-rows: set-grid($rows);
     grid-template-areas: $templateMd;
     width: 100%;
+    min-width: 200px;
+
 
     .container-first {
       grid-area: section1;
-      min-width: 365px;
+      min-width: 200px;
+      height: 100%;
+      min-height: 70rem;
 
       .first {
         margin: 0 1.4rem;
+        min-height: 70rem;
       }
 
       .container-quote {
@@ -316,7 +321,7 @@ main {
       }
 
       .container-title {
-        min-width: 365px;
+        min-width: 200px;
 
         h1 {
           font-size: 12vw;
@@ -333,7 +338,7 @@ main {
       grid-area: section2;
       height: 100%;
       width: 100%;
-      min-width: 365px;
+      min-width: 200px;
       min-height: 50rem;
 
       .main-program {

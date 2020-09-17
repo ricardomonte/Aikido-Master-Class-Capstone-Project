@@ -70,6 +70,9 @@ header .nav-container-botton .nav-ul-bottom {
   justify-content: space-between;
   width: 50%;
 }
+header .nav-container-botton .nav-li-bottom {
+  margin: 0 5px;
+}
 header .nav-container-botton .li-link {
   font-weight: 700;
   color: #696969;
@@ -122,6 +125,7 @@ footer .container-footer {
   align-items: center;
   column-gap: 5em;
   padding: 2em 0;
+  flex-wrap: wrap;
 }
 footer img {
   width: 150px;
@@ -420,19 +424,23 @@ main .partners .container-partners .brand .brand-img {
     grid-template-rows: repeat(1fr, 4);
     grid-template-areas: "section1" "section2" "section3" "section4";
     width: 100%;
+    min-width: 200px;
   }
   main .container-first {
     grid-area: section1;
-    min-width: 365px;
+    min-width: 200px;
+    height: 100%;
+    min-height: 70rem;
   }
   main .container-first .first {
     margin: 0 1.4rem;
+    min-height: 70rem;
   }
   main .container-first .container-quote {
     font-size: 2.2em;
   }
   main .container-first .container-title {
-    min-width: 365px;
+    min-width: 200px;
   }
   main .container-first .container-title h1 {
     font-size: 12vw;
@@ -445,7 +453,7 @@ main .container-first .container-date {
     grid-area: section2;
     height: 100%;
     width: 100%;
-    min-width: 365px;
+    min-width: 200px;
     min-height: 50rem;
   }
   main .container-main-program .main-program {
