@@ -1,0 +1,20 @@
+footer {
+  background-color: rgba($fifth-color, 0.2);
+
+  .container-footer {
+    @include containerPage;
+    @include rowStart;
+
+    column-gap: 5em;
+    padding: 2em 0;
+    flex-wrap: wrap;
+  }
+
+  img {
+    @include imgSize;
+  }
+}
+
+.dark-footer {
+  background-color: $fourth-color;
+}

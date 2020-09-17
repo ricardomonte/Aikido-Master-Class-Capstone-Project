@@ -1,0 +1,63 @@
+// colors
+
+$primary-color: #272a31;
+$secundary-color: #ec5242;
+$third-color: #d3d3d3;
+$fourth-color: #696969;
+$fifth-color: #f5f5f5;
+$bgd-white: #fff;
+$color-null: null;
+
+// breakpoint
+
+$breakpoint-Md: 767px;
+$breakpoint-Lg: 768px;
+
+$font-lato: 'Lato', sans-serif;
+$font-coco-border: 'Cocogoose-border';
+$font-coco-regular: 'Cocogoose-regular';
+
+//height header
+
+$h-topHeader: 5vh;
+$h-bottomHeader: 15vh;
+
+// first secction height
+
+$h-firstSecction: 92vh;
+
+//grid
+$rows2: 2;
+$rows: 4;
+$rows1: 1;
+$rows5: 5;
+$rows3: 3;
+
+$template1:'job1 job2 job3 job4 job5';
+
+$templateMd: 'section1' 'section2' 'section3' 'section4';
+
+$templateMdRow2: 'program1' 'program2';
+
+$templateMdRow4: 'program1' 'program2' 'program3' 'program4';
+
+$templateMdRow5: 'program1' 'program2' 'program3' 'program4' 'program5';
+
+$templateMdRow3: 'program1' 'program2' 'program3';
+
+//flex
+
+$d-flex: flex;
+$flex-direcRow: row;
+$flex-direcCol: column;
+$ali-Center: center;
+$ali-Fstart: flex-start;
+$ali-fEnd: flex-end;
+$jus-Center: center;
+$jus-sBetween: space-between;
+$jus-sAround: space-around;
+
+//absolute
+
+$toplg: 148px;
+$topmd: 39px;

@@ -1,0 +1,162 @@
+@mixin containerPage {
+  margin: 0 12vw;
+}
+
+@mixin columnFLex-main ($flex, $direction, $align, $justify) {
+  display: $flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin rowMenu {
+  display: $d-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin rowStart {
+  display: $d-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin rowCenter {
+  display: $d-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin color-bg ($color) {
+  background-color: $color;
+}
+
+@mixin background ($color, $top: null) {
+  @if $top != null {
+    background: url(../img/christiantissier.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: $top;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(180deg, rgba(245, 245, 245, 0.6169467616148022) 0%, rgb(245, 245, 245) 60%);
+      min-height: 57rem;
+    }
+  }
+
+  @if $color != null {
+    background: $color;
+  }
+}
+
+@mixin clip {
+  background: linear-gradient(180deg, rgba(saturate($secundary-color, 100%), 0.99) 0%, rgba(saturate($secundary-color, 100%), 0.8) 77%), url(../img/aikido2.png);
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  background-size: contain;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@mixin textBase {
+  text-align: left;
+  width: 50%;
+  color: $fourth-color;
+}
+
+@mixin h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+
+  &::after {
+    content: '___';
+    display: flex;
+    justify-content: center;
+    color: $secundary-color;
+  }
+}
+
+@mixin backgroundMprogram {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALUlEQVQYlWNQUtH8z0AAwNXgU4whh00xTgPUtQz/I2OcbhkghUR5hqjgITbAAeEyKTnSw6pPAAAAAElFTkSuQmCC) repeat;
+  background-size: 3%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    z-index: -1;
+  }
+}
+
+@mixin programTitle {
+  color: $secundary-color;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.8rem;
+}
+
+@mixin programText ($color) {
+  color: $color;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+@mixin posAb {
+  position: absolute;
+
+  @include containerPage();
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: $template1;
+}
+
+@mixin h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+@mixin h5 {
+  font-size: 1em;
+  font-weight: 700;
+  color: $secundary-color;
+}
+
+@mixin imgSize {
+  width: 150px;
+  height: 150px;
+}
+
+@mixin mediaMd {
+  @media screen and(max-width: $breakpoint-Md) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and(min-width: $breakpoint-Lg) {
+    @content;
+  }
+}
+
+@mixin gridMd {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+@function set-grid($temp) {
+  @return repeat(1fr, $temp);
+}

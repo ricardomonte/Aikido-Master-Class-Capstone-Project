@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'cocogoose_font';
+@import 'mixins';
+@import 'menu';
+@import 'main';
+@import 'footer';
+
+* {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-lato;
+
+  h1 {
+    font-family: $font-coco-regular;
+  }
+}
+
+// links
+
+a {
+  text-decoration: none;
+}
+
+//list
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+h3,
+h4 {
+  margin-bottom: 0;
+}

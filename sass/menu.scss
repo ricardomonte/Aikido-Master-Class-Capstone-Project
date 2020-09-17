@@ -1,0 +1,131 @@
+header {
+  background-color: $bgd-white;
+  width: 100%;
+
+  .top-header {
+    height: 30%;
+    background-color: $primary-color;
+  }
+
+  .nav-container {
+    @include containerPage;
+    @include rowMenu;
+  }
+
+  .nav-ul {
+    @include rowMenu;
+
+    padding-top: 0.5rem;
+  }
+
+  .nav-li {
+    padding: 0 1vw;
+
+    .li-link {
+      color: $third-color;
+    }
+  }
+
+  .bottom-header {
+    height: 60%;
+    justify-content: space-between;
+    width: 75%;
+
+    @extend .nav-container;
+  }
+
+  .container-menu {
+    width: 100%;
+  }
+
+  .img-logo {
+    width: 116px;
+    height: 116px;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .navbar-toggler {
+    .line {
+      display: block;
+      background-color: $secundary-color;
+      margin-bottom: 5px;
+      width: 40px;
+      height: 5px;
+    }
+  }
+
+  .nav-container-botton {
+    @include rowMenu;
+
+    width: 100%;
+    column-gap: 5rem;
+
+    .nav-ul-bottom {
+      @include rowMenu;
+
+      justify-content: space-between;
+      width: 50%;
+    }
+
+    .nav-li-bottom {
+      margin: 0 5px;
+    }
+
+    .li-link {
+      font-weight: 700;
+      color: $fourth-color;
+    }
+
+    .selected {
+      color: $secundary-color;
+    }
+
+    .campaign {
+      background-color: transparent;
+      border: 4px solid $secundary-color;
+    }
+  }
+}
+
+@include mediaMd {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    .top-header {
+      display: none;
+    }
+
+    .bottom-header {
+      margin: 0 1.4rem;
+
+      .img-logo {
+        display: none;
+      }
+    }
+
+    .campaign {
+      display: none;
+    }
+
+    .container-menu {
+      position: absolute;
+      top: 39px;
+      z-index: 2;
+
+      @include background($bgd-white);
+
+      left: 0;
+    }
+  }
+
+  header .nav-container-botton .nav-ul-bottom {
+    width: 100%;
+  }
+}

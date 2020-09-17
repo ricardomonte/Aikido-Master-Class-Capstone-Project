@@ -1,0 +1,475 @@
+
+@import 'variables';
+@import 'cocogoose_font';
+@import 'mixins';
+@import 'menu';
+@import 'footer';
+
+* {
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-lato;
+
+  h1 {
+    font-family: $font-coco-regular;
+  }
+}
+
+// links
+
+a {
+  text-decoration: none;
+}
+
+//list
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+h3,
+h4 {
+  margin-bottom: 0;
+}
+
+main {
+  .container-first {
+    @include background ($fifth-color);
+
+    .first {
+      position: relative;
+
+      @include containerPage;
+
+      height: 100ch;
+      min-height: 57rem;
+      z-index: 1;
+
+      .container-first-info {
+        position: absolute;
+
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+
+        top: 0;
+        height: 100%;
+      }
+    }
+
+    .container-quote {
+      font-size: 3em;
+      color: saturate($secundary-color, 100%);
+    }
+
+    .about-quote {
+      display: none;
+    }
+
+    .container-title {
+      width: 80%;
+
+      @include columnFLex-main ($d-flex, $flex-direcRow, $ali-Center, $jus-Center);
+
+      text-align: center;
+
+      h1 {
+        font-size: 6em;
+        color: saturate($secundary-color, 100%);
+        font-weight: 900;
+      }
+    }
+
+    .container-info {
+      border: 4px solid white;
+      font-weight: 700;
+      padding: 0.6em;
+      width: 100%;
+      line-height: 1.8em;
+      text-align: center;
+
+      .info-amcw {
+        padding: 2vw 2.5em;
+
+        @include programText($fourth-color);
+      }
+    }
+
+    .container-date {
+      border: 0;
+      margin-top: 3em;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .container-main-program {
+    height: 80ch;
+    border-bottom: 2px solid rgba($fourth-color, 50%);
+    min-width: 40rem;
+
+    .main-program {
+      @include containerPage;
+
+      height: 90%;
+
+      &:nth-child(1) {
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+
+        text-align: center;
+      }
+    }
+
+    .main-program-title {
+      @include columnFLex-main ($d-flex, $flex-direcRow, $ali-Center, $jus-sAround);
+
+      width: 100%;
+    }
+
+    h2 {
+      @include h2;
+
+      color: $fourth-color;
+    }
+
+    .container-program-section {
+      @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sBetween);
+
+      height: 70%;
+
+      .general-section {
+        padding: 1.5rem;
+
+        p {
+          @include programText($fourth-color);
+        }
+      }
+
+      .img-container {
+        width: 50%;
+        border: 2px solid rgba($fourth-color, 50%);
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  .master {
+    @include containerPage;
+    @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+
+    height: 80vh;
+    min-height: 30rem;
+    padding: 100px 0;
+
+    .master-title {
+      @include h2;
+
+      color: $fourth-color;
+    }
+
+    .container-master {
+      height: 100%;
+      width: 100%;
+
+      @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+    }
+
+    .master-text {
+      .description {
+        font-weight: 700;
+        font-size: 0.8em;
+      }
+    }
+
+    .master-info {
+      @include columnFLex-main ($d-flex, $flex-direcRow, $ali-Center, $jus-sAround);
+
+      width: 100%;
+      height: 80%;
+    }
+
+    .master-img {
+      position: relative;
+      background: url(../img/au2019.jpg);
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: $secundary-color;
+        mix-blend-mode: color;
+      }
+    }
+
+    .year-master {
+      text-align: center;
+      position: absolute;
+
+      @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-Center);
+
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: white;
+      z-index: 2;
+
+      h3 {
+        font-size: 2.2em;
+        font-weight: 900;
+        color: $third-color;
+      }
+
+      .city {
+        @include programText($fourth-color);
+      }
+    }
+
+    .distance {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+
+    .img-size {
+      width: 100%;
+    }
+  }
+
+  .partners {
+    display: none;
+    background-color: $fourth-color;
+    text-align: center;
+    padding: 4em 0;
+
+    .partner-title {
+      @include h2;
+
+      color: $third-color;
+    }
+
+    .container-partners {
+      @include containerPage;
+      @include grid;
+
+      .brand {
+        position: relative;
+        width: 150px;
+        height: 150px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($fourth-color, 0.8);
+        }
+
+        .brand-img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include mediaMd {
+  main {
+    @include gridMd;
+
+    grid-template-rows: set-grid($rows);
+    grid-template-areas: $templateMd;
+    width: 100%;
+    min-width: 200px;
+
+    .container-first {
+      grid-area: section1;
+      min-width: 200px;
+      height: 100%;
+      min-height: 70rem;
+
+      .first {
+        margin: 0 1.4rem;
+        min-height: 70rem;
+      }
+
+      .container-quote {
+        font-size: 2.2em;
+      }
+
+      .container-title {
+        min-width: 200px;
+
+        h1 {
+          font-size: 12vw;
+        }
+      }
+
+      .container-info,
+      .container-date {
+        width: 100%;
+      }
+    }
+
+    .container-main-program {
+      grid-area: section2;
+      height: 100%;
+      width: 100%;
+      min-width: 200px;
+      min-height: 50rem;
+
+      .main-program {
+        margin: 0 1.4rem;
+        height: 100vh;
+      }
+
+      .container-program-section {
+        @include gridMd;
+
+        grid-template-rows: set-grid($rows2);
+        grid-template-areas: $templateMdRow2;
+        height: 70%;
+        row-gap: 10px;
+
+        .general-section {
+          grid-area: program1;
+          width: 100%;
+
+          @include columnFLex-main($d-flex, $flex-direcRow, $ali-Center, $jus-Center);
+        }
+
+        .img-container {
+          grid-area: program2;
+        }
+      }
+
+      .hole-program {
+        width: 72%;
+        height: 4.3rem;
+      }
+
+      .program-link {
+        display: none;
+      }
+
+      .join {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.3rem;
+      }
+    }
+
+    .master {
+      grid-area: section3;
+      margin: 0 1.4rem;
+      padding: 14px 0;
+
+      .master-title {
+        @include h2;
+
+        color: $fourth-color;
+      }
+
+      .container-master {
+        @include gridMd;
+
+        grid-template-rows: set-grid($rows2);
+        grid-template-areas: $templateMdRow2;
+        height: 85%;
+        row-gap: 10px;
+      }
+
+      .master-text {
+        grid-area: program1;
+        text-align: center;
+        padding-bottom: 0.8em;
+      }
+
+      .master-info {
+        grid-area: program2;
+        grid-template-rows: set-grid($rows2);
+        grid-template-areas: $templateMdRow2;
+        height: 35ch;
+        row-gap: 10px;
+        width: 100%;
+        margin-bottom: 100px;
+
+        @include gridMd;
+
+        .master-img1 {
+          grid-area: program1;
+        }
+
+        .master-img2 {
+          grid-area: program2;
+        }
+
+        .none {
+          display: none;
+        }
+      }
+    }
+
+    .display {
+      display: block;
+    }
+
+    .partners {
+      padding: 2em 0;
+
+      @include background($fifth-color);
+
+      .container-partners {
+        margin: 0 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 20px;
+        justify-content: center;
+
+        .brand {
+          &::after {
+            background-color: rgba($fifth-color, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mediaLg {
+  header {
+    .bottom-header img {
+      display: block;
+    }
+  }
+
+  main {
+    #no-display {
+      display: none;
+    }
+  }
+}

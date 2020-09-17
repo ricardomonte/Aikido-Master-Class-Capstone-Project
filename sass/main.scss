@@ -1,0 +1,471 @@
+main {
+  .container-first {
+    @include background ($color-null, $toplg);
+
+    .first {
+      position: relative;
+
+      @include containerPage;
+
+      height: 100vh;
+      z-index: 1;
+      min-height: 57rem;
+
+      .container-first-info {
+        position: absolute;
+        top: 0;
+        height: 100%;
+
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Fstart, $jus-sAround);
+      }
+    }
+
+    .container-quote {
+      font-size: 3em;
+      color: saturate($secundary-color, 100%);
+    }
+
+    .container-title {
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+
+      h1 {
+        @include clip;
+
+        font-size: 6.4em;
+        font-weight: 900;
+      }
+    }
+
+    .container-info {
+      border: 4px solid white;
+      font-weight: 700;
+      padding: 0.6em;
+
+      @include textBase;
+    }
+
+    .container-date {
+      @extend .container-info;
+
+      border: 0;
+      margin-top: 3em;
+
+      h2 {
+        font-family: $font-coco-regular;
+      }
+    }
+  }
+
+  .container-main-program {
+    position: relative;
+    height: 68vh;
+
+    @include backgroundMprogram;
+    @include rowCenter;
+
+    min-height: 42rem;
+
+    .main-program {
+      height: 100%;
+
+      @include posAb;
+
+      &:nth-child(1) {
+        @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+
+        text-align: center;
+      }
+    }
+
+    .program-text {
+      @include h2;
+
+      color: whitesmoke;
+    }
+
+    .container-program-section {
+      @include grid;
+
+      column-gap: 10px;
+
+      .general-section {
+        background-color: rgba($fourth-color, 0.2);
+        padding: 2rem 1.38rem;
+
+        h3 {
+          @include programTitle;
+        }
+
+        h4 {
+          @include programText ($fifth-color);
+        }
+      }
+
+      .section1 {
+        grid-template: 'job1';
+      }
+
+      .section2 {
+        grid-template: 'job2';
+      }
+
+      .section3 {
+        grid-template: 'job3';
+      }
+
+      .section4 {
+        grid-template: 'job4';
+      }
+
+      .section5 {
+        grid-template: 'job5';
+      }
+    }
+
+    .hole-program {
+      padding-bottom: 1em;
+    }
+
+    .program-link {
+      @include programText($fifth-color);
+
+      text-transform: uppercase;
+    }
+
+    .btn-join {
+      @include programText($fifth-color);
+
+      font-size: 1.6em;
+      background-color: $secundary-color;
+      width: 100%;
+    }
+
+    .join {
+      display: none;
+    }
+  }
+
+  .master {
+    @include containerPage;
+    @include columnFLex-main ($d-flex, $flex-direcCol, $ali-Center, $jus-sAround);
+
+    padding-bottom: 20px;
+
+    .master-title {
+      @include h2;
+
+      color: $fourth-color;
+      padding-top: 0.8em;
+    }
+
+    .container-master {
+      height: 75%;
+      width: 100%;
+      flex-wrap: wrap;
+      row-gap: 50px;
+
+      @include columnFLex-main($d-flex, $flex-direcRow, $ali-Center, $jus-sBetween);
+    }
+
+    .master-img {
+      @include imgSize;
+    }
+
+    .img-size {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .master-info {
+      @include columnFLex-main($d-flex, $flex-direcRow, $ali-Fstart, $jus-sBetween);
+
+      width: 45%;
+    }
+
+    .master-text {
+      margin-left: 20px;
+    }
+
+    .master-name {
+      @include h3;
+
+      color: $fourth-color;
+    }
+
+    .master-city {
+      @include h5;
+
+      &::after {
+        content: '___';
+        display: flex;
+        justify-content: flex-start;
+        color: rgba($fourth-color, 0.2);
+      }
+    }
+
+    .master-resume {
+      font-weight: 700;
+      font-size: 0.8em;
+      color: $fourth-color;
+    }
+  }
+
+  .partners {
+    background-color: $fourth-color;
+    text-align: center;
+    padding: 4em 0;
+
+    .partners-container {
+      @include containerPage;
+    }
+
+    .partner-title {
+      @include h2;
+
+      color: $third-color;
+    }
+
+    .container-partners {
+      @include columnFLex-main($d-flex, $flex-direcRow, $ali-Center, $jus-Center);
+
+      flex-wrap: wrap;
+
+      .brand {
+        position: relative;
+        width: 150px;
+        height: 150px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($fourth-color, 0.8);
+        }
+
+        .brand-img {
+          @include imgSize;
+
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@include mediaMd {
+  main {
+    @include gridMd;
+
+    grid-template-rows: set-grid($rows);
+    grid-template-areas: $templateMd;
+    width: 100%;
+
+    .container-first {
+      @include background ($color-null, $topmd);
+
+      grid-area: section1;
+
+      .first {
+        margin: 0 1.4rem;
+        height: 57em;
+      }
+
+      .container-first-info {
+        height: 57em;
+      }
+
+      .container-quote {
+        font-size: 2.2em;
+      }
+
+      .container-title {
+        height: 100%;
+        width: 100%;
+
+        @include columnFLex-main($d-flex, $flex-direcCol, $ali-Fstart, $jus-Center);
+
+        h1 {
+          font-size: 4em;
+        }
+      }
+
+      .container-info,
+      .container-date {
+        width: 100%;
+      }
+    }
+
+    .container-main-program {
+      grid-area: section2;
+      height: 80em;
+
+      .main-program {
+        margin: 0 1.4rem;
+        height: 100%;
+
+        @include columnFLex-main($d-flex, $flex-direcCol, $ali-Center, $jus-Center);
+      }
+
+      .container-program-section {
+        @include gridMd;
+
+        grid-template-rows: set-grid($rows5);
+        grid-template-areas: $templateMdRow5;
+        height: 70%;
+        row-gap: 10px;
+
+        .section1 {
+          grid-area: program1;
+        }
+
+        .section2 {
+          grid-area: program2;
+        }
+
+        .section3 {
+          grid-area: program3;
+        }
+
+        .section4 {
+          grid-area: program4;
+        }
+
+        .section5 {
+          grid-area: program5;
+        }
+
+        .general-section {
+          display: flex;
+          align-items: center;
+          padding: 2em 1.6em;
+        }
+      }
+
+      .hole-program {
+        width: 72%;
+        height: 4.3rem;
+      }
+
+      .program-link {
+        display: none;
+      }
+
+      .join {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.3rem;
+      }
+    }
+
+    .master {
+      grid-area: section3;
+      margin: 0 1.4rem;
+      height: 100%;
+      min-height: 49rem;
+
+      .container-master {
+        @include gridMd;
+
+        grid-template-rows: set-grid($rows1);
+        grid-template-areas: $templateMdRow2;
+        row-gap: 20px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .master-info {
+        width: 100%;
+      }
+
+      .master1 {
+        grid-area: program1;
+      }
+
+      .master2 {
+        grid-area: program2;
+      }
+
+      .none {
+        display: none;
+      }
+    }
+
+    #display-none {
+      display: none;
+    }
+
+    .display-btn {
+      display: flex;
+      justify-content: center;
+      margin: 0 1.4rem;
+
+      button {
+        height: 52px;
+        width: 100%;
+        background-color: transparent;
+        text-transform: uppercase;
+
+        span {
+          margin: 0 0 0 10px;
+
+          i {
+            color: $secundary-color;
+          }
+        }
+      }
+    }
+
+    .more-master {
+      height: 100%;
+      margin: 20px 0;
+      margin: 0 1.4rem;
+    }
+
+    .partners {
+      padding: 2em 0;
+
+      .container-partners {
+        margin: 0 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 20px;
+        justify-content: center;
+
+        .brand {
+          width: 150px;
+          height: 150px;
+
+          .brand-img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mediaLg {
+  header {
+    .bottom-header img {
+      display: block;
+    }
+  }
+
+  main {
+    #no-display {
+      display: none;
+    }
+  }
+}
